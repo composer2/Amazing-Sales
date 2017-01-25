@@ -15,6 +15,6 @@ Online store and blog
 
 ##<a href="https://github.com/TelerikAcademy/Slice-and-Dice/tree/master/Course-Project">Project Requirements</a>  
 
-##GitHub:<a href="https://github.com/composer2/Amazing-Sales">White Riders</a>
+##GitHub:<a href="https://github.com/composer2/Amazing-Sales">Amazing Sales</a>
 
 ##Presentation: <a href="not done">Amazing Sales Presentation</a>
