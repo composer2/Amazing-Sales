@@ -1,14 +1,23 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Amazing Sales</title>
     <link rel="icon" href="./images/logo-mobile.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 
+    <!--lib-->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--app-->
     <script src="./node_modules/systemjs/dist/system.js"></script>
     <script src="./js/system-config.js"></script>
-
+    <!--routing-->
     <script src="./node_modules/navigo/lib/navigo.js"></script>
 
     <script>
@@ -16,26 +25,51 @@
     </script>
 
 </head>
+<header class="container">
+    <nav class="navbar navbar-default" id="header-bar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="">
+                    <img class="logo img-responsive center-block" src="./images/logo.png" alt="Logo" width="130" height="60">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="row">
+                    <div class="col-sm-3 pull-right" id="search-box">
+                        <div id="imaginary_container">
+                            <div class="input-group stylish-input-group input-append">
+                                <input type="text" class="form-control" placeholder="Search in this website">
+                                <span class="input-group-addon"><button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="social-icons">
+                        <a href=''><i class="fa fa-facebook fa-pull-right fa-border"></i></a>
+                        <a href=''><i class="fa fa-twitter fa-pull-right fa-border"></i></a>
+                        <a href=''><i class="fa fa-google-plus fa-pull-right fa-border"></i></a>
+                    </div>
+                </div>
+                <ul id="nav-menu" class="nav navbar-nav navbar-right">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Page Templates</a></li>
+                    <li><a href="">Shortcodes</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
-<body style="background: url('./images/bg-color.jpg')">
-    <h3>Static paths</h3>
-    <a href="#test/?redirect=true&color=ff00ff">Test</a><br />
-    <a href="#settings/">Settings</a><br />
-    <a href="#quit/">Quit</a><br />
-    <hr />
-    <h3>Dynamic paths</h3>
-    <a href="#book/1/">Book1</a><br />
-    <a href="#book/2/">Book2</a><br />
-    <a href="#book/3/note/1/">Note1</a><br />
-    <a href="#book/3/note/2/">Note2</a><br />
-    <hr />
-    <h3>Query strings</h3>
-    <a href="#test/?framework=qunit">Test</a><br />
-    <a href="#book/1/?title=HelpMe">Book1</a><br />
-    <a href="#book/3/note/1/?body=LOL">Note1</a><br />
-    <hr />
-    <h3>Output</h3>
-    <div id="result"></div>
+<body>
+
 </body>
 
 </html>
