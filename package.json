@@ -4,7 +4,8 @@
     "description": "online-store-and-blog",
     "main": "index.js",
     "scripts": {
-        "start": "live-server"
+        "start": "live-server",
+        "start2": "node-sass --watch main.scss main2.css"
     },
     "repository": {
         "type": "git",
