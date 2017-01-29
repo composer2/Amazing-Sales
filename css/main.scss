@@ -1,220 +1,314 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('../images/bg-color.jpg');
-}
-
-
-/*header-bar*/
-
-#header-bar {
-    background-color: white;
-}
-
-#nav-menu li:hover a {
-    color: orangered;
-    transform: scale(1.3);
-}
-
-
-/*header-bar*/
-
-
-/*search-box*/
-
-#search-box {
-    margin: 0;
-    padding: 0;
-    margin-right: -15px;
-    /*border: 1px solid black;*/
-}
-
-.stylish-input-group {
-    .input-group-addon {
-        background-color: #f6f6f6;
-        border: none;
-        border-bottom: 1px solid lightgrey;
-        border-radius: 0 0 0;
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('../images/bg-color.jpg');
     }
-    .form-control {
-        background-color: #f6f6f6;
-        box-shadow: 0 0 0;
-        border: none;
-        border-left: 1px solid lightgrey;
-        border-bottom: 1px solid lightgrey;
-        border-radius: 0 0 0;
+    /*header-bar*/
+    
+    #header-bar {
+        background-color: white;
     }
-    button {
-        border: none;
-        background: transparent;
-    }
-}
-
-.fa {
-    background: lightgrey;
-    color: white;
-    border-radius: 5px;
-    &:hover {
-        color: dodgerblue;
+    
+    #nav-menu li:hover a {
+        color: orangered;
         transform: scale(1.3);
     }
-}
-
-#social-icons {
-    margin-right: 20px;
-    margin-top: 10px;
-    float: right;
-}
-
-
-/*carousel*/
-
-.carousel {
-    margin-top: -11px;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-
-/* Carousel Styles */
-
-#indicators {
-    width: 98.65%;
-    bottom: -65px;
-    left: 30.7%;
-    height: 56px;
-    background-color: white;
-    li {
-        background-color: grey;
-        margin-top: 22px;
-        border: 2px solid grey;
-    }
-    .active {
-        background-color: black;
-    }
-}
-
-.carousel-indicators .active {
-    background-color: black;
-}
-
-.carousel-inner img {
-    width: 100%;
-    max-height: 332px;
-}
-
-.carousel-control {
-    width: 0;
-    .left {
-        background-image: none;
-        background-repeat: no-repeat;
-        text-shadow: none;
-    }
-    .right {
-        background-image: none;
-        background-repeat: no-repeat;
-        text-shadow: none;
-    }
-}
-
-#prev {
-    margin-top: 70px;
-    margin-left: -129px;
-}
-
-#next {
-    margin-top: 59px;
-    margin-left: -172px;
-}
-
-
-/* Carousel Header Styles */
-
-.header-text {
-    position: absolute;
-    top: 44px;
-    left: 58%;
-    width: 417px;
-    height: 237px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 20;
-    h2 {
-        font-size: 20px;
-        span {
-            padding: 10px;
-        }
-    }
-    h6 {
-        opacity: 1;
-        position: absolute;
-        top: 200px;
-        left: 330px;
-        width: 86px;
-        height: 26px;
-        padding-top: 7px;
-        padding-left: 12px;
-        background-color: rgba(0, 0, 0, 0.6);
-        z-index: 30;
-    }
-}
-
-
-/*carousel*/
-
-
-/*search-box*/
-
-
-/*image*/
-
-.logo {
-    margin-top: 10%;
-    margin-left: 10%;
-}
-
-
-/*image*/
-
-
-/*media queries*/
-
-@media screen and (max-width: 767px) {
-    .logo {
-        margin-top: -7px;
-        margin-left: -7px;
-    }
+    /*header-bar*/
+    /*search-box*/
+    
     #search-box {
         margin: 0;
         padding: 0;
+        margin-right: -15px;
+        /*border: 1px solid black;*/
     }
-    #social-icons {
-        margin-right: 42%;
-    }
-    .fa {
-        margin-left: 20px;
-        background-color: dodgerblue;
-    }
-    #nav-menu li {
-        text-align: center;
-        border-top: 1px solid lightgrey;
-        &:hover {
-            background-color: darkgray;
+    
+    .stylish-input-group {
+        .input-group-addon {
+            background-color: #f6f6f6;
+            border: none;
+            border-bottom: 1px solid lightgrey;
+            border-radius: 0 0 0;
+        }
+        .form-control {
+            background-color: #f6f6f6;
+            box-shadow: 0 0 0;
+            border: none;
+            border-left: 1px solid lightgrey;
+            border-bottom: 1px solid lightgrey;
+            border-radius: 0 0 0;
+        }
+        button {
+            border: none;
+            background: transparent;
         }
     }
-}
-
-@media screen and (max-width: 425px) {
-    #social-icons {
-        margin-right: 35%;
+    
+    .fa {
+        background: lightgrey;
+        color: white;
+        border-radius: 5px;
+        &:hover {
+            color: dodgerblue;
+            transform: scale(1.3);
+        }
     }
-}
-
-@media screen and (max-width: 320px) {
+    
     #social-icons {
-        margin-right: 30%;
+        margin-right: 20px;
+        margin-top: 10px;
+        float: right;
     }
-}
-
-
-/*media queries*/
+    /*carousel*/
+    
+    .carousel {
+        margin-top: -11px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    /* Carousel Styles */
+    
+    #indicators {
+        width: 98.65%;
+        left: 30.7%;
+        bottom: -65px;
+        height: 56px;
+        background-color: white;
+        li {
+            background-color: grey;
+            margin-top: 22px;
+            border: 2px solid grey;
+        }
+        .active {
+            background-color: black;
+        }
+    }
+    
+    .carousel-indicators .active {
+        background-color: black;
+    }
+    
+    .carousel-inner img {
+        width: 100%;
+        max-height: 332px;
+    }
+    
+    .carousel-control {
+        width: 0;
+        .left {
+            background-image: none;
+            background-repeat: no-repeat;
+            text-shadow: none;
+        }
+        .right {
+            background-image: none;
+            background-repeat: no-repeat;
+            text-shadow: none;
+        }
+    }
+    
+    #prev {
+        margin-top: 70px;
+        margin-left: -129px;
+    }
+    
+    #next {
+        margin-top: 59px;
+        margin-left: -172px;
+    }
+    /* Carousel Header Styles */
+    
+    .header-text {
+        position: absolute;
+        top: 44px;
+        left: 58%;
+        width: 417px;
+        height: 237px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 20;
+        h2 {
+            font-size: 20px;
+            span {
+                padding: 10px;
+            }
+        }
+        h6 {
+            opacity: 1;
+            position: absolute;
+            top: 200px;
+            left: 330px;
+            width: 86px;
+            height: 26px;
+            padding-top: 7px;
+            padding-left: 12px;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 30;
+        }
+    }
+    /*carousel*/
+    /*search-box*/
+    /*image*/
+    
+    .logo {
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+    /*image*/
+    /*home-page*/
+    
+    #main-content {
+        position: absolute;
+        top: 472px;
+        left: 5%;
+        width: 90.2%;
+        height: 300px;
+        background: white;
+        h1 {
+            font-size: 40px;
+        }
+        h5 {
+            font-size: 24px;
+        }
+        text-align: center;
+        font-family: 'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+    }
+    /*home-page*/
+    /*media queries*/
+    
+    @media screen and (max-width: 1024px) {
+        .header-text {
+            top: 48px;
+            left: 52%;
+            width: 400px;
+            height: 237px;
+            h6 {
+                top: 200px;
+                left: 314px;
+                width: 86px;
+                height: 26px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        #indicators {
+            width: 98.1%;
+            left: 30.9%;
+        }
+        .header-text {
+            top: 48px;
+            left: 52%;
+            width: 300px;
+            height: 237px;
+            h6 {
+                top: 180px;
+                left: 214px;
+                width: 86px;
+                height: 26px;
+            }
+        }
+        #prev {
+            margin-top: 40px;
+            margin-left: -129px;
+        }
+        #next {
+            margin-top: 29px;
+            margin-left: -172px;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        #indicators {
+            width: 98.02%;
+            left: 31%;
+        }
+        .logo {
+            margin-top: -7px;
+            margin-left: -7px;
+        }
+        #search-box {
+            margin: 0;
+            padding: 0;
+        }
+        #social-icons {
+            margin-right: 42%;
+        }
+        .fa {
+            margin-left: 20px;
+            background-color: dodgerblue;
+        }
+        #nav-menu li {
+            text-align: center;
+            border-top: 1px solid lightgrey;
+            &:hover {
+                background-color: darkgray;
+            }
+        }
+        #next,
+        #prev {
+            opacity: 0;
+        }
+    }
+    
+    @media screen and (max-width: 425px) {
+        #social-icons {
+            margin-right: 35%;
+        }
+        #prev {
+            margin-top: 20px;
+            margin-left: -129px;
+        }
+        #next {
+            margin-top: 9px;
+            margin-left: -172px;
+        }
+        #indicators {
+            width: 96.6%;
+            left: 31.8%;
+            height: 36px;
+            bottom: -45px;
+            li {
+                margin-top: 11px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        #prev {
+            margin-top: 0px;
+            margin-left: -129px;
+        }
+        #next {
+            margin-top: -19px;
+            margin-left: -172px;
+        }
+        #indicators {
+            width: 96%;
+            left: 32%;
+            height: 36px;
+            bottom: -45px;
+            li {
+                margin-top: 11px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 320px) {
+        #social-icons {
+            margin-right: 30%;
+        }
+        #indicators {
+            width: 95%;
+            left: 32.5%;
+            height: 36px;
+            bottom: -45px;
+            li {
+                margin-top: 11px;
+            }
+        }
+    }
+    /*media queries*/
