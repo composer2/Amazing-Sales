@@ -240,6 +240,30 @@
         border-radius: 5px;
     }
     /*Media end carousel */
+    /*Footer*/
+    
+    #footer {
+        background-color: #f9f9f9;
+        width: 90.15%;
+        margin-left: 4.9%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        .footer-logo {
+            img {
+                display: block;
+                margin: 0;
+                padding: 0;
+                margin-top: -6px;
+                margin-left: -15px;
+            }
+            h6 {
+                width: 180px;
+                clear: both;
+                display: block;
+            }
+        }
+    }
+    /*Footer*/
     /*media queries*/
     
     @media screen and (max-width: 2560px) {
@@ -293,6 +317,43 @@
                 }
             }
         }
+        #footer {
+            padding-bottom: 25px;
+            .container {
+                .footer-logo {
+                    img {
+                        margin-top: -12px;
+                        width: 180px;
+                    }
+                    h6 {
+                        width: 200px;
+                        font-size: 15px;
+                    }
+                }
+                margin-left: 40px;
+                width: 95%;
+                .footer-element {
+                    margin: 0;
+                    padding: 0;
+                    width: 240px;
+                    margin-left: 45px;
+                    margin-top: -10px;
+                    ul {
+                        padding: 20px;
+                        margin-top: -25px;
+                        li {
+                            width: 210px;
+                        }
+                    }
+                }
+                .first-footer-element {
+                    margin-left: 60px;
+                }
+            }
+            .footer-reserved {
+                padding-right: 50px;
+            }
+        }
     }
     
     @media screen and (max-width: 1280px) {
@@ -319,6 +380,22 @@
         }
         #header-bar-nav {
             width: 92.65%;
+        }
+        #footer {
+            .container {
+                .footer-element {
+                    width: 230px;
+                    margin-left: 35px;
+                    ul {
+                        li {
+                            width: 200px;
+                        }
+                    }
+                }
+                .first-footer-element {
+                    margin-left: 30px;
+                }
+            }
         }
     }
     
@@ -357,6 +434,29 @@
                     margin-left: -20px;
                     margin-top: 20px;
                 }
+            }
+        }
+        #footer {
+            width: 91.5%;
+            margin-left: 4.25%;
+            .container {
+                .footer-logo {
+                    img {
+                        margin-top: -12px;
+                        margin-left: -22px;
+                    }
+                }
+                margin-left: 30px;
+                .footer-element {
+                    width: 200px;
+                    margin-left: 15px;
+                }
+                .first-footer-element {
+                    margin-left: 30px;
+                }
+            }
+            .footer-reserved {
+                padding-right: 40px;
             }
         }
     }
@@ -429,6 +529,46 @@
                     margin-left: -20px;
                     margin-top: 30px;
                 }
+            }
+        }
+        #footer {
+            width: 93.5%;
+            margin-left: 3.25%;
+            .container {
+                .footer-logo {
+                    img {
+                        margin-top: -12px;
+                        margin-left: -22px;
+                        width: 150px;
+                    }
+                    h6 {
+                        width: 170px;
+                        font-size: 12px;
+                    }
+                }
+                margin-left: 20px;
+                .footer-element {
+                    h3 {
+                        font-size: 18px;
+                    }
+                    width: 150px;
+                    margin-left: 0px;
+                    margin-top: -10px;
+                    ul {
+                        padding: 10px;
+                        margin-top: -5px;
+                        li {
+                            width: 150px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .first-footer-element {
+                    margin-left: 0px;
+                }
+            }
+            .footer-reserved {
+                padding-right: 30px;
             }
         }
     }
@@ -559,6 +699,52 @@
             }
             width: 100%;
             padding: 0;
+        }
+        #footer {
+            width: 92.5%;
+            margin-left: 3.75%;
+            height: 520px;
+            .container {
+                .footer-logo {
+                    img {
+                        margin-top: -12px;
+                        margin-left: -22px;
+                        width: 150px;
+                    }
+                    h6 {
+                        width: 170px;
+                        font-size: 12px;
+                    }
+                }
+                margin-left: 20px;
+                width: 95%;
+                border: 1px solid red;
+                .footer-element {
+                    h3 {
+                        font-size: 18px;
+                    }
+                    border: 1px solid red;
+                    margin: 0;
+                    padding: 0;
+                    width: 150px;
+                    margin-left: 0px;
+                    margin-top: -10px;
+                    ul {
+                        padding: 10px;
+                        margin-top: -5px;
+                        li {
+                            width: 150px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .first-footer-element {
+                    margin-left: 0px;
+                }
+            }
+            .footer-reserved {
+                padding-right: 50px;
+            }
         }
     }
     
