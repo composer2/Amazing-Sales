@@ -7,6 +7,8 @@
     
     #header-bar {
         background-color: white;
+        border-radius: 0;
+        border-bottom: none;
     }
     
     #nav-menu li {
@@ -252,18 +254,29 @@
         margin-left: 4.9%;
         padding-top: 25px;
         padding-bottom: 25px;
-        .footer-logo {
-            img {
-                display: block;
-                margin: 0;
-                padding: 0;
-                margin-top: -6px;
-                margin-left: -15px;
+        .container {
+            li {
+                a {
+                    color: #929292;
+                }
+                &:hover a {
+                    color: orangered;
+                }
             }
-            h6 {
-                width: 180px;
-                clear: both;
-                display: block;
+            .footer-logo {
+                img {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: -6px;
+                    margin-left: -15px;
+                }
+                h6 {
+                    width: 180px;
+                    clear: both;
+                    display: block;
+                    color: #929292;
+                }
             }
         }
     }

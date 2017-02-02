@@ -5,7 +5,9 @@ body {
 
 /*header-bar*/
 #header-bar {
-  background-color: white; }
+  background-color: white;
+  border-radius: 0;
+  border-bottom: none; }
 
 #nav-menu li {
   color: #393939;
@@ -206,16 +208,21 @@ body {
   margin-left: 4.9%;
   padding-top: 25px;
   padding-bottom: 25px; }
-  #footer .footer-logo img {
+  #footer .container li a {
+    color: #929292; }
+  #footer .container li:hover a {
+    color: orangered; }
+  #footer .container .footer-logo img {
     display: block;
     margin: 0;
     padding: 0;
     margin-top: -6px;
     margin-left: -15px; }
-  #footer .footer-logo h6 {
+  #footer .container .footer-logo h6 {
     width: 180px;
     clear: both;
-    display: block; }
+    display: block;
+    color: #929292; }
 
 #footer-reserved-creator {
   display: none;

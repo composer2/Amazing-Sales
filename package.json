@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "live-server",
-        "start2": "cd css && node-sass --watch main.scss main2.css"
+        "start2": "cd css && node-sass --watch home.scss home.css"
     },
     "repository": {
         "type": "git",
