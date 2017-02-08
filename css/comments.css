@@ -1,0 +1,127 @@
+#comments .media {
+    background-image: url("../images/comment.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 105.5%;
+    margin-left: -15px;
+    position: relative;
+}
+
+#comments .nested {
+    background-image: url("../images/comment.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 89%;
+    margin-left: 14%;
+    margin-top: -15px;
+    position: relative;
+}
+
+#comments .media img {
+    margin-top: 30px;
+    margin-left: 30px;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+#comments .media h3 {
+    display: inline-block;
+    margin-left: -15px;
+    margin-top: 30px;
+    position: absolute;
+    color: #1d1d1d;
+}
+
+#comments .media p {
+    display: inline-block;
+    position: absolute;
+    margin-right: 40px;
+    margin-left: -15px;
+    margin-top: 70px;
+    color: #929292;
+}
+
+#comments .nested .nested-p {
+    position: absolute;
+    margin-right: 40px;
+    color: #929292;
+}
+
+#comments .media .text-right {
+    position: relative;
+    float: right;
+    margin-top: 25px;
+    margin-right: 30px;
+    color: #d4d4d4;
+}
+
+#comments .comment-question {
+    position: absolute;
+    bottom: 50px;
+    right: 43px;
+    padding: 7px 7px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #1d1d1d
+}
+
+#comments .comment-answer {
+    position: absolute;
+    bottom: 50px;
+    right: 39px;
+    padding: 7px 7px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #1d1d1d
+}
+
+#comments .comment-question:hover {
+    background-color: #E6E6E6;
+    border: 1px solid #ADADAD;
+    color: orangered;
+}
+
+#comments .comment-answer:hover {
+    background-color: #E6E6E6;
+    border: 1px solid #ADADAD;
+    color: orangered;
+}
+
+
+/*#comments .media .nested {
+    margin-left: -20px;
+}*/
+
+
+/*media queries*/
+
+@media screen and (max-width: 2560px) {}
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1280px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 425px) {}
+
+@media screen and (max-width: 375px) {}
+
+@media screen and (max-width: 320px) {}
+
+
+/*media queries*/

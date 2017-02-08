@@ -42,6 +42,7 @@
 
 .post-content {
     margin: 10px;
+    min-height: 730px;
 }
 
 .post-content .posted-by {
@@ -59,20 +60,83 @@
 
 .post-content aside {
     margin-top: 5px;
+    padding-left: 40px;
 }
 
 .post-content aside ul {
     padding-left: 10px;
+    color: #929292;
+}
+
+.post-content aside ul h3 {
+    color: #1d1d1d;
 }
 
 .post-content aside ul li {
     margin-left: 17px;
     font-size: 15px;
+    line-height: 25px;
+}
+
+.post-content aside ul li a {
+    color: #929292;
+    text-decoration: none;
+}
+
+.post-content aside ul li:hover a {
+    color: orangered;
 }
 
 .post-content section img {
     border-radius: 0;
     margin-right: 30px;
+}
+
+.post-content section a {
+    border: 1px solid #eaeaea;
+    color: #2c2c2c;
+    margin-top: 20px;
+}
+
+.post-content section a:hover {
+    color: orangered;
+}
+
+.post-content article h5 {
+    color: #929292;
+    line-height: 25px;
+}
+
+.post-content div .page-pagination {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -50px;
+}
+
+.post-content div .page-pagination .selected {
+    background-color: #f6f6f6
+}
+
+.post-content div .page-pagination li {
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid #eaeaea;
+    border-radius: 7px;
+    margin: 2.5px;
+}
+
+.post-content div .page-pagination li a {
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+.post-content div .page-pagination li:hover {
+    background-color: lightgrey;
+}
+
+.post-content div .page-pagination li:hover a {
+    color: orangered;
 }
 
 @media screen and (max-width: 2560px) {}
