@@ -11,4 +11,15 @@ $(document).ready(function() {
         $(".breadcrumb").append("<li><a href=" + link + ">" + link + "</a></li>");
     }
     // breadcrumbs
+    //sign in/out
+    $("#sign-in-out").click(function() {
+        var text = $(this).html();
+        if (text === "Sign in") {
+            text = "Sign out"
+        } else if (text === "Sign out") {
+            text = "Sign in"
+        }
+        $(this).html(text);
+    });
+    //sign in/out
 });
