@@ -350,7 +350,7 @@ body {
     margin: 0;
     padding-top: 5px;
     padding-right: 20px;
-    width: 44%;
+    width: 51%;
     height: 50px;
     background-color: white;
 }
@@ -368,7 +368,7 @@ body {
     color: orangered;
 }
 
-#nav-collapse2 .form-inline .form-group #Email {
+#nav-collapse2 .form-inline .form-group #Email { 
     background-image: url("../images/input-bg.png");
     background-repeat: repeat-x;
 }
