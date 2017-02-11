@@ -368,7 +368,7 @@ body {
     color: orangered;
 }
 
-#nav-collapse2 .form-inline .form-group #Email { 
+#nav-collapse2 .form-inline .form-group #Email {
     background-image: url("../images/input-bg.png");
     background-repeat: repeat-x;
 }
@@ -376,6 +376,11 @@ body {
 #nav-collapse2 .form-inline .form-group #Password {
     background-image: url("../images/input-bg.png");
     background-repeat: repeat-x;
+}
+
+#mobile-sign-in,
+#mobile-sign-out {
+    display: none;
 }
 
 
@@ -464,6 +469,10 @@ body {
     }
     #footer .footer-reserved {
         padding-right: 50px;
+    }
+    #nav-collapse2 {
+        padding-right: 0px;
+        width: 45%;
     }
 }
 
@@ -557,6 +566,9 @@ body {
     }
     #footer .footer-reserved {
         padding-right: 40px;
+    }
+    #nav-collapse2 {
+        width: 61%;
     }
 }
 
@@ -669,6 +681,12 @@ body {
         margin-left: 10%;
         width: 140px;
     }
+    #nav-collapse2 {
+        width: 61%;
+    }
+    #nav-collapse2 input {
+        width: 130px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -727,7 +745,7 @@ body {
         width: 130px;
     }
     #social-icons {
-        margin-right: 35%;
+        margin-right: 31%;
     }
     #prev {
         margin-top: 20px;
@@ -831,6 +849,31 @@ body {
         font-size: 12px;
         font-weight: normal;
     }
+    #sign-in-out {
+        display: none;
+    }
+    #mobile-sign-in {
+        display: inline;
+    }
+    #nav-collapse2 {
+        width: 100%;
+        height: 90px;
+    }
+    #nav-collapse2 .form-inline .form-group {
+        width: 180px;
+        float: left;
+        margin-left: 10px;
+    }
+    #nav-collapse2 #Email {
+        width: 180px;
+    }
+    #nav-collapse2 #Password {
+        width: 180px;
+    }
+    #nav-collapse2 .form-inline .btn {
+        width: 180px;
+        margin-left: 10px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -897,11 +940,24 @@ body {
         width: 91.5%;
         margin-left: 4.14%;
     }
+    #nav-collapse2 .form-inline .form-group {
+        width: 160px;
+    }
+    #nav-collapse2 #Email {
+        width: 160px;
+    }
+    #nav-collapse2 #Password {
+        width: 160px;
+    }
+    #nav-collapse2 .form-inline .btn {
+        width: 160px;
+        margin-left: 8px;
+    }
 }
 
 @media screen and (max-width: 320px) {
     #social-icons {
-        margin-right: 30%;
+        margin-right: 23%;
     }
     #indicators {
         width: 95%;
@@ -925,6 +981,25 @@ body {
     #footer-reserved-creator {
         width: 90.5%;
         margin-left: 4.64%;
+    }
+    #nav-collapse2 {
+        width: 100%;
+        height: 90px;
+    }
+    #nav-collapse2 .form-inline .form-group {
+        width: 135px;
+        float: left;
+        margin-left: 5px;
+    }
+    #nav-collapse2 #Email {
+        width: 135px;
+    }
+    #nav-collapse2 #Password {
+        width: 135px;
+    }
+    #nav-collapse2 .form-inline .btn {
+        width: 135px;
+        margin-left: 3px;
     }
 }
 

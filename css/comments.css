@@ -162,23 +162,169 @@
 
 /*media queries*/
 
-@media screen and (max-width: 2560px) {}
+@media screen and (max-width: 2560px) {
+    #comments .nested {
+        margin-left: 15%;
+    }
+    #comment-reply fieldset button {
+        width: 200px;
+        left: 85.7%;
+    }
+    .post-content #read-less {
+        width: 200px;
+    }
+    #comment-reply fieldset #description {
+        width: 97.5%;
+        left: 29px;
+    }
+}
 
-@media screen and (max-width: 1440px) {}
+@media screen and (max-width: 1440px) {
+    #comments .nested {
+        margin-left: 14.5%;
+    }
+    #comment-reply fieldset button {
+        width: 150px;
+        margin-left: -45px;
+    }
+    .post-content #read-less {
+        width: 150px;
+    }
+    #comment-reply fieldset #description {
+        width: 97.5%;
+        left: 14px;
+    }
+}
 
-@media screen and (max-width: 1280px) {}
+@media screen and (max-width: 1024px) {
+    #comments .nested {
+        margin-left: 14%;
+    }
+    #comment-reply fieldset button {
+        width: 90px;
+        margin-left: -20px;
+    }
+    .post-content #read-less {
+        width: 90px;
+    }
+    #comment-reply fieldset #description {
+        width: 97.5%;
+        left: 12px;
+    }
+}
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 768px) {
+    #comments .nested {
+        margin-left: 13.5%;
+    }
+    #comment-reply fieldset button {
+        margin-left: -43px;
+    }
+    #comment-reply fieldset #description {
+        width: 97.5%;
+        left: 10px;
+    }
+    #comments .nested #nested-author {
+        margin-top: 12px;
+    }
+}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 425px) {
+    #comments .media {
+        margin-left: -15%;
+        min-height: 300px;
+        height: auto;
+        width: 130%;
+    }
+    #comments .media h3 {
+        margin-top: 80px;
+    }
+    #comments .nested {
+        margin-left: -10%;
+        width: 125%;
+    }
+    #comment-reply fieldset button {
+        margin-left: -240px;
+    }
+    #read-less {
+        margin-top: -40px;
+        height: 38px;
+    }
+    #comment-reply fieldset #description {
+        width: 97.5%;
+        left: 10px;
+    }
+    #comments .media #nested-author1 {
+        font-size: 1.2em;
+        margin-top: 32px;
+    }
+    #comments .nested #nested-author2 {
+        margin-top: 32px;
+        font-size: 1.2em;
+        margin-left: 0;
+        width: 180px;
+    }
+    #comments .nested-p-mobile {
+        top: 60px;
+        left: 45px;
+        width: 88%;
+        height: auto;
+    }
+    #comment-reply {
+        left: -20px;
+    }
+    #comment-reply fieldset #name {
+        width: 98%;
+    }
+    #comment-reply fieldset #email {
+        width: 98%;
+    }
+    #comment-reply fieldset #description {
+        left: 8px;
+        width: 98%;
+    }
+    #comment-reply fieldset button {
+        width: 63%;
+        left: 72%;
+    }
+    #category-title {
+        margin-top: -20px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 375px) {
+    #comment-reply fieldset #name {
+        width: 108%;
+    }
+    #comment-reply fieldset #email {
+        width: 108%;
+    }
+    #comment-reply fieldset #description {
+        left: 8px;
+        width: 108%;
+    }
+    #comment-reply fieldset button {
+        width: 53%;
+        left: 85%;
+    }
+    #read-less {
+        margin-top: -40px;
+        height: 38px;
+        margin-right: -25px;
+    }
+}
 
-@media screen and (max-width: 425px) {}
-
-@media screen and (max-width: 375px) {}
-
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 320px) {
+    #comment-reply fieldset button {
+        width: 53%;
+        left: 104%;
+    }
+    #read-less {
+        margin-right: -20px;
+    }
+}
 
 
 /*media queries*/
