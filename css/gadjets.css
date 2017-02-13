@@ -4919,180 +4919,190 @@ ul.actions li a:hover {}
 }
 
 #main-content {
-    border:1px solid white;
-    background:white;
-    width:90.1%;
-    margin-left:5%;
-    margin-top:-20px;
+    border: 1px solid white;
+    background: white;
+    width: 90.1%;
+    margin-left: 5%;
+    margin-top: -20px;
 }
-#header-bar{
-    width:109.85%;
-    margin-left:-4.9%;
+
+#header-bar {
+    width: 109.85%;
+    margin-left: -4.9%;
 }
-.img-container .lazy{
+
+.img-container .lazy {
     position: absolute;
-    top:15%;
-    left:0;
-    width:100%;
+    top: 15%;
+    left: 0;
+    width: 100%;
 }
 
 
 /*media queries*/
+
 @media screen and (max-width: 2560px) {
-#main-content {
-    width:90.1%;
-    margin-left:5%;
-}
-#header-bar{
-    width:219.85%;
-    margin-left:-59.8%;
-}
-#header-bar .container-fluid .logo{
-    margin-top:-5px;
-    margin-left:205%;
-    width:300px;   
-    height:130px;
-}
-#header-bar .container-fluid #myNavbar{
-    margin-right:620px;
-}
-#header-bar .container-fluid #myNavbar #search-box{
-    margin-right:0px;
+    #main-content {
+        width: 90.1%;
+        margin-left: 5%;
+    }
+    #header-bar {
+        width: 219.85%;
+        margin-left: -59.8%;
+    }
+    #header-bar .container-fluid .logo {
+        margin-top: -5px;
+        margin-left: 205%;
+        width: 300px;
+        height: 130px;
+    }
+    #header-bar .container-fluid #myNavbar {
+        margin-right: 620px;
+    }
+    #header-bar .container-fluid #myNavbar #search-box {
+        margin-right: 0px;
     }
 }
+
 @media screen and (max-width: 1440px) {
     #main-content {
-    width:90.1%;
-    margin-left:5%;
-}
-#header-bar{
-    width:123.65%;
-    margin-left:-11.8%;
-    height:110px;
-}
-#header-bar .container-fluid .logo{
-    margin-left:22%;
-    width:300px;   
-    height:100px;
-}
-#header-bar .container-fluid #myNavbar{
-    margin-right:0px;
-}
-#header-bar .container-fluid #myNavbar #search-box{
-    margin-right:-14px;
-}
-#footer .container .row{
-    width:120%;
-}
-}
-@media screen and (max-width: 1024px) {
-  #main-content {
-    width:93%;
-    margin-left:5%;
-}
-#header-bar{
-    width:101.95%;
-    margin-left:0.6%;
-    height:110px;
-}
-#header-bar .container-fluid .logo{
-    margin-left:2%;
-    width:250px;   
-    height:90px;
+        width: 90.1%;
+        margin-left: 5%;
+    }
+    #header-bar {
+        width: 123.65%;
+        margin-left: -11.8%;
+        height: 110px;
+    }
+    #header-bar .container-fluid .logo {
+        margin-left: 22%;
+        width: 300px;
+        height: 100px;
+    }
+    #header-bar .container-fluid #myNavbar {
+        margin-right: 0px;
+    }
+    #header-bar .container-fluid #myNavbar #search-box {
+        margin-right: -14px;
+    }
+    #footer .container .row {
+        width: 120%;
+    }
 }
 
-#footer {
-    width:93%;
-    margin-left:5%;
+@media screen and (max-width: 1280px) {
+    #header-bar {
+        width: 108.55%;
+        margin-left: -4.2%;
+        height: 110px;
+    }
 }
+
+@media screen and (max-width: 1024px) {
+    #main-content {
+        width: 93%;
+        margin-left: 5%;
+    }
+    #header-bar {
+        width: 101.95%;
+        margin-left: 0.6%;
+        height: 110px;
+    }
+    #header-bar .container-fluid .logo {
+        margin-left: 2%;
+        width: 250px;
+        height: 90px;
+    }
+    #footer {
+        width: 93%;
+        margin-left: 5%;
+    }
 }
 
 @media screen and (max-width: 768px) {
     #main-content {
-    width:95.6%;
-    margin-left:3.6%;
-}
-#header-bar{
-    width:101.95%;
-    margin-left:0.6%;
-    height:90px;
-}
-#header-bar .container-fluid .logo{
-    margin-left:2.5%;
-    width:150px;   
-    height:60px;
-}
-
-#footer {
-    width:95.6%;
-    margin-left:3.6%;
-}  
+        width: 95.6%;
+        margin-left: 3.6%;
+    }
+    #header-bar {
+        width: 101.95%;
+        margin-left: 0.6%;
+        height: 90px;
+    }
+    #header-bar .container-fluid .logo {
+        margin-left: 2.5%;
+        width: 150px;
+        height: 60px;
+    }
+    #footer {
+        width: 95.6%;
+        margin-left: 3.6%;
+    }
 }
 
 @media screen and (max-width: 425px) {
-#main-content {
-    width:94.2%;
-    margin-left:4.3%;
-}
-#header-bar{
-    width:101.95%;
-    margin-left:0.6%;
-    height:50px;
-}
-#header-bar .container-fluid .logo{
-    margin-left:2.5%;
-    width:100px;   
-    height:40px;
-}
-#footer-reserved-creator {
-    width:94.6%;
-    margin-left:4.1%;
-}
-#myNavbar{
-    position:relative;
-    z-index:100000;
-    background:white;
-}
-#main-content .product .badge{
-    width:100%;
-}
-#heart-heading-h4{
-margin-left:-18px;
-}  
-#check-icons{
-    margin-left:10px;
-}
-.icon-heart-broken{
-    margin-left:-14px;
-}
-.icon-heart{
-    margin-left:-14px;
-
-}
+    #main-content {
+        width: 94.2%;
+        margin-left: 4.3%;
+    }
+    #header-bar {
+        width: 101.95%;
+        margin-left: 0.6%;
+        height: 50px;
+    }
+    #header-bar .container-fluid .logo {
+        margin-left: 2.5%;
+        width: 100px;
+        height: 40px;
+    }
+    #footer-reserved-creator {
+        width: 94.6%;
+        margin-left: 4.1%;
+    }
+    #myNavbar {
+        position: relative;
+        z-index: 100000;
+        background: white;
+    }
+    #main-content .product .badge {
+        width: 100%;
+    }
+    #heart-heading-h4 {
+        margin-left: -18px;
+    }
+    #check-icons {
+        margin-left: 10px;
+    }
+    .icon-heart-broken {
+        margin-left: -14px;
+    }
+    .icon-heart {
+        margin-left: -14px;
+    }
 }
 
 @media screen and (max-width: 375px) {
-#header-bar{
-    width:103%;
-    margin-left:0%;
-    height:50px;
-}
-#footer-reserved-creator {
-    width:94.6%;
-    margin-left:4%;
-}
+    #header-bar {
+        width: 103%;
+        margin-left: 0%;
+        height: 50px;
+    }
+    #footer-reserved-creator {
+        width: 94.6%;
+        margin-left: 4%;
+    }
 }
 
 @media screen and (max-width: 320px) {
-#header-bar{
-    width:104.5%;
-    margin-left:-0.7%;
-    height:50px;
-}
-#footer-reserved-creator {
-    width:94%;
-    margin-left:4.5%;
-}
+    #header-bar {
+        width: 104.5%;
+        margin-left: -0.7%;
+        height: 50px;
+    }
+    #footer-reserved-creator {
+        width: 94%;
+        margin-left: 4.5%;
+    }
 }
 
 

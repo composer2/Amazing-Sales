@@ -507,6 +507,9 @@ body {
     #footer .container .first-footer-element {
         margin-left: 30px;
     }
+    #nav-collapse2 {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
