@@ -1,35 +1,38 @@
 {
-    "name": "amazing-sales",
-    "version": "1.0.0",
-    "description": "online-store-and-blog",
-    "main": "index.js",
-    "scripts": {
-        "start": "live-server",
-        "start2": "cd css && node-sass --watch home.scss home.css"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/composer2/Amazing-Sales.git"
-    },
-    "author": "Boncho Belutov",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/composer2/Amazing-Sales/issues"
-    },
-    "homepage": "https://github.com/composer2/Amazing-Sales#readme",
-    "dependencies": {
-        "bootstrap": "^3.3.7",
-        "handlebars": "^4.0.5",
-        "http-server": "^0.9.0",
-        "jquery": "^3.1.1",
-        "navigo": "^2.3.4",
-        "noty": "^2.4.0",
-        "systemjs": "^0.19.38",
-        "systemjs-plugin-babel": "^0.0.15"
-    },
-    "devDependencies": {
-        "mocha": "^3.1.0",
-        "chai": "^3.5.0",
-        "sinon": "^1.17.5"
-    }
+  "name": "amazing-sales",
+  "version": "1.0.0",
+  "description": "online-store-and-blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "start2": "cd css && node-sass --watch home.scss home.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/composer2/Amazing-Sales.git"
+  },
+  "author": "Boncho Belutov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/composer2/Amazing-Sales/issues"
+  },
+  "homepage": "https://github.com/composer2/Amazing-Sales#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "handlebars": "^4.0.5",
+    "http-server": "^0.9.0",
+    "install": "^0.8.7",
+    "jquery": "^3.1.1",
+    "navigo": "^2.3.4",
+    "noty": "^2.4.0",
+    "npm": "^4.3.0",
+    "sammy": "^0.7.6",
+    "systemjs": "^0.19.38",
+    "systemjs-plugin-babel": "^0.0.15"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.0",
+    "chai": "^3.5.0",
+    "sinon": "^1.17.5"
+  }
 }
