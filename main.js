@@ -18,15 +18,9 @@ let $page = $('#page');
             homeController.home(context, '#main-content');
         });
 
-        this.get('#/login', usersController.print);
-
-        this.get('#/logout', usersController.print);
-
-        this.get('#/logout', usersController.print);
-
-        this.get('#/profile', (context) => {
-            usersController.profile(context, '#main-content');
-        });
+        // this.get('#/profile', (context) => {
+        //     usersController.profile(context, '#main-content');
+        // });
 
         this.get('#/about-us', (context) => {
             $("#page-css").attr("href", "./css/about-us.css");
@@ -61,6 +55,28 @@ let $page = $('#page');
 
             blogController.threadsById(context, '#main-content');
         });
+        //sign in/out
+        $("#sign-in-out").click(function() {
+            var text = $(this).html();
+            if (text === "Sign in") {
+                text = "Sign out";
+                $('#nav-collapse2').addClass('in')
+            } else if (text === "Sign out") {
+                text = "Sign in";
+                $('#nav-collapse2').removeClass('in')
+                usersController.logout();
+            }
+            $(this).html(text);
+        });
+
+        $('#sign-in-btn').click(function() {
+            usersController.signInUp();
+            $('#nav-collapse2').removeClass('in')
+        });
+        $('#register-btn').click(function() {
+            usersController.register();
+        });
+
     });
 
     $(function() {
@@ -70,9 +86,9 @@ let $page = $('#page');
     // usersController.isUserLoggedIn()
     //     .then((isLoggedIn) => {
     //         if (isLoggedIn) {
-    //             $('#page').addClass('logged-in');
+    //             $('#main-content').addClass('logged-in');
     //         } else {
-    //             $('#page').removeClass('logged-in');
+    //             $('#main-content').removeClass('logged-in');
     //         }
     //     })
     //     .then(() => {

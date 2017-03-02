@@ -19,16 +19,17 @@
   "homepage": "https://github.com/composer2/Amazing-Sales#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "crypto-js": "^3.1.9-1",
     "handlebars": "^4.0.5",
     "http-server": "^0.9.0",
     "install": "^0.8.7",
     "jquery": "^3.1.1",
-    "navigo": "^2.3.4",
     "noty": "^2.4.0",
     "npm": "^4.3.0",
     "sammy": "^0.7.6",
     "systemjs": "^0.19.38",
-    "systemjs-plugin-babel": "^0.0.15"
+    "systemjs-plugin-babel": "^0.0.15",
+    "toastr": "^2.1.2"
   },
   "devDependencies": {
     "mocha": "^3.1.0",

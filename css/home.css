@@ -852,7 +852,7 @@ body {
         font-size: 12px;
         font-weight: normal;
     }
-    #sign-in-out {
+    .sign-in-out {
         display: none;
     }
     #mobile-sign-in {
