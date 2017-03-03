@@ -13,6 +13,7 @@ class UserController {
         userModel.login(user)
             .then((res) => {
                     $('#main-content').addClass('logged-in');
+                    $('#nav-collapse2').removeClass('in')
                     notificator.success(`${res.username} signed in!`);
                 },
                 function(err) {
@@ -41,7 +42,7 @@ class UserController {
                 $('#main-content').removeClass('logged-in');
                 notificator.success('Successfully logout')
             }, (err) => {
-                notificator.error(JSON.parse(err).err)
+                notificator.error(err)
             });
     }
 

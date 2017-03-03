@@ -71,7 +71,6 @@ let $page = $('#page');
 
         $('#sign-in-btn').click(function() {
             usersController.signInUp();
-            $('#nav-collapse2').removeClass('in')
         });
         $('#register-btn').click(function() {
             usersController.register();

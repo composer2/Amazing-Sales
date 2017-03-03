@@ -15,7 +15,7 @@ const ACCESS_TOKEN = 'v0yhnv1ybqbskxn24rt6qbu3fmi3whmz';
 function createRequestOptions(user) {
     return {
         username: user.username,
-        passHash: CryptoJS.SHA1($(user.password).val()).toString()
+        password: CryptoJS.SHA1($(user.password).val()).toString()
     }
 }
 
@@ -42,10 +42,12 @@ class UserModel {
 
     login(user) {
         let promise = new Promise((resolve, reject) => {
-            let url = 'api/users/auth';
-            let options = createRequestOptions(user);
-
-            requester.put(url, options)
+            let url = kinvey_URL + 'user/' + kinvey_APP_ID + '/login';
+            let authBase64 = btoa(kinvey_APP_ID + ":" + kinvey_APP_SECRET);
+            let headers = { Authorization: "Basic " + authBase64 }
+            let data = createRequestOptions(user)
+            let options = { headers, data };
+            requester.post(url, options)
                 .then(function(res) {
                     localStorage.setItem(STORAGE_USERNAME, res.username);
                     localStorage.setItem(STORAGE_USERNAME_ID, res._id);
@@ -68,10 +70,22 @@ class UserModel {
 
     logout() {
         let promise = new Promise((resolve, reject) => {
-            localStorage.removeItem(STORAGE_AUTH_KEY);
-            localStorage.removeItem(STORAGE_USERNAME);
-            resolve();
+            let url = kinvey_URL + 'user/' + kinvey_APP_ID + '/_logout';
+            let authBase64 = btoa(kinvey_APP_ID + ":" + kinvey_APP_SECRET);
+            let headers = { Authorization: "Kinvey " + localStorage.getItem(STORAGE_AUTH_KEY) }
+            let options = { headers };
+            console.log(options.headers);
+            requester.post(url, options)
+                .then(function(res) {
+                    localStorage.removeItem(STORAGE_AUTH_KEY);
+                    localStorage.removeItem(STORAGE_USERNAME);
+                    localStorage.removeItem(STORAGE_USERNAME_ID);
+                    resolve(res);
+                }, function(err) {
+                    reject(err);
+                });
         });
+
         return promise;
     }
 
