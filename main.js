@@ -64,7 +64,9 @@ let $page = $('#page');
             } else if (text === "Sign out") {
                 text = "Sign in";
                 $('#nav-collapse2').removeClass('in')
-                usersController.logout();
+                if ($('#main-content').hasClass('logged-in')) {
+                    usersController.logout();
+                }
             }
             $(this).html(text);
         });
@@ -82,16 +84,18 @@ let $page = $('#page');
         sammyApp.run('#/');
     });
 
-    // usersController.isUserLoggedIn()
-    //     .then((isLoggedIn) => {
-    //         if (isLoggedIn) {
-    //             $('#main-content').addClass('logged-in');
-    //         } else {
-    //             $('#main-content').removeClass('logged-in');
-    //         }
-    //     })
-    //     .then(() => {
-    //         return usersController.storeAllUsers();
-    //     })
-    //     .then();
+    usersController.isUserLoggedIn()
+        .then((isLoggedIn) => {
+            if (isLoggedIn) {
+                $('#main-content').addClass('logged-in');
+                $("#sign-in-out").html("Sign out");
+            } else {
+                $('#main-content').removeClass('logged-in');
+                $("#sign-in-out").html("Sign in");
+            }
+        })
+        // .then(() => {
+        //     return usersController.storeAllUsers();
+        // })
+        .then();
 })();

@@ -14,6 +14,7 @@ class UserController {
             .then((res) => {
                     $('#main-content').addClass('logged-in');
                     $('#nav-collapse2').removeClass('in')
+                    $('#profile-show-hide').removeClass('hidden');
                     notificator.success(`${res.username} signed in!`);
                 },
                 function(err) {
@@ -30,8 +31,8 @@ class UserController {
             .then((res) => {
                 notificator.success('Registered Successfully');
                 $('#nav-collapse2').removeClass('in')
+                $('#profile-show-hide').removeClass('hidden');
             }, (err) => {
-                console.log(err);
                 notificator.error("Register Unsuccessful");
             });
     }
@@ -40,6 +41,7 @@ class UserController {
         userModel.logout()
             .then((res) => {
                 $('#main-content').removeClass('logged-in');
+                $('#profile-show-hide').addClass('hidden');
                 notificator.success('Successfully logout')
             }, (err) => {
                 notificator.error(err)

@@ -74,7 +74,6 @@ class UserModel {
             let authBase64 = btoa(kinvey_APP_ID + ":" + kinvey_APP_SECRET);
             let headers = { Authorization: "Kinvey " + localStorage.getItem(STORAGE_AUTH_KEY) }
             let options = { headers };
-            console.log(options.headers);
             requester.post(url, options)
                 .then(function(res) {
                     localStorage.removeItem(STORAGE_AUTH_KEY);

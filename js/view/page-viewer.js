@@ -38,8 +38,8 @@ class PageView {
         return loadRawTemplate(selector, 'profile');
     }
 
-    shop(selector) {
-        return loadRawTemplate(selector, 'shop');
+    shop(selector, products) {
+        return setHtmlWithCompiledData(selector, products, 'shop');
     }
 
     threads(selector) {

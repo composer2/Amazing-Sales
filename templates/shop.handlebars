@@ -1,32 +1,30 @@
-<article id="product-1" class="product">
+{{#each products}}
+<article id="{{_id}}" class="product">
     <div class="container">
-        <div class="score"><a><span>#1</span></a></div>
+        <div class="score"><a><span>{{@index}}</span></a></div>
         <h3 class="badge">
             <span class="ec">
-            <i class="fa fa-check" aria-hidden="true" style="background: rgb(50, 146, 208); color:#8EC47F; "></i>Best Men's Cologne for Warmer Weather          </span>
+            <i class="fa fa-check" aria-hidden="true" style="background: rgb(50, 146, 208); color:#8EC47F; "></i>{{name}}</span>
         </h3>
         <div class="inner">
             <div class="row">
                 <div class="col-lg-5 col-xl-4">
                     <p class="product-title hidden-lg-up">
-                        <a href="http://buy.geni.us/Proxy.ashx?TSID=20968&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2FNautica-Voyage-Men-Toilette-Spray%2Fdp%2FB000P22TIY%2F%3Ftag%3Dfave-mens-cologne-20&amp;dtb=1"
-                            target="_blank">Nautica Voyage By Nautica For Men Eau De Toilette Spray</a>
+                        <a href="{{imageSource}}"
+                            target="_blank">{{fullName}}</a>
                     </p>
                     <div class="image">
                         <div class="responsive-container">
                             <div class="dummy"></div>
                             <div class="img-container">
-                                <img class="lazy" data-original="https://res.cloudinary.com/faveable/image/upload/c_fit,f_auto,q_auto/v1/nautica-voyage-by-nautica-for-men-eau-de-toilette-spray-"
-                                    alt="Best Men's Cologne for Warmer Weather: Nautica Voyage By Nautica For Men Eau De Toilette Spray"
-                                    src="https://res.cloudinary.com/faveable/image/upload/c_fit,f_auto,q_auto/v1/nautica-voyage-by-nautica-for-men-eau-de-toilette-spray-"
-                                    style="">
+                                <img class="lazy" data-original="{{imageSource}}" alt="{{altDescription}}" src="{{imageSource}}" style="">
                             </div>
                         </div>
                         <div class="controllers">
                             <div class="l " data-fav="unfave" data-id="36770" data-user="0" data-anon="1486743847" data-items="18" data-sortorder="17"><label class="icon-heart-broken"><i class="fa fa-thumbs-down" aria-hidden="true" style="background: white; color: black;"   ></i></label></div>
                             <div class="m">
                                 <small>Score</small>
-                                <strong>76</strong>
+                                <strong>{{score}}</strong>
                             </div>
                             <div class="r " data-fav="fave" data-id="36770" data-user="0" data-anon="1486743847" data-items="18" data-sortorder="17"><label class="icon-heart"><i class="fa fa-thumbs-up" aria-hidden="true" style="background: white; color: black;"></i></label></div>
                         </div>
@@ -35,8 +33,7 @@
                 <!-- .col- -->
                 <div class="col-lg-7 col-xl-8">
                     <h2 class="product-title hidden-md-down">
-                        <a href="http://buy.geni.us/Proxy.ashx?TSID=20968&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2FNautica-Voyage-Men-Toilette-Spray%2Fdp%2FB000P22TIY%2F%3Ftag%3Dfave-mens-cologne-20&amp;dtb=1"
-                            class="see" data-fave="36770" target="_blank" onclick="ga('send', 'event', 'Article > List', 'Item > Title > Click', 'Nautica Voyage By Nautica For Men Eau De Toilette Spray');">Nautica Voyage By Nautica For Men Eau De Toilette Spray</a>
+                        <a href="{{linkToAmazon}}" class="see" data-fave="36770" target="_blank" onclick="ga('send', 'event', 'Article > List', 'Item > Title > Click', 'Nautica Voyage By Nautica For Men Eau De Toilette Spray');">{{fullName}}</a>
                     </h2>
                     <div class="sec">
                         <div class="row">
@@ -44,31 +41,27 @@
                                 <div class="price-card">
                                     <div class="r">
                                         <div class="price">
-                                            <strong>$13</strong>
+                                            <strong>${{price}}</strong>
                                             <span class="sale">&nbsp;&nbsp;</span>
                                         </div>
                                     </div>
                                     <div class="r">
-                                        <a href="http://buy.geni.us/Proxy.ashx?TSID=20968&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2FNautica-Voyage-Men-Toilette-Spray%2Fdp%2FB000P22TIY%2F%3Ftag%3Dfave-mens-cologne-20&amp;dtb=1"
-                                            class="see btn btn-info btn-block" target="_blank" data-fave="36770" onclick="ga('send', 'event', 'Article > List', 'Item > Buy Button > Click', 'Nautica Voyage By Nautica For Men Eau De Toilette Spray');"><i class="icon-right"></i>$13&nbsp;at&nbsp;amazon.com</a>
+                                        <a href="{{linkToAmazon}}" class="see btn btn-info btn-block" target="_blank" data-fave="36770" onclick="ga('send', 'event', 'Article > List', 'Item > Buy Button > Click', 'Nautica Voyage By Nautica For Men Eau De Toilette Spray');"><i class="icon-right"></i>${{price}}&nbsp;at&nbsp;amazon.com</a>
                                     </div>
                                     <div class="r">
                                         <span class="states">
-                            <i class="fa fa-tags" aria-hidden="true" style="background: white; color: #8EC47F;"></i> 1138 Purchased • <a href="http://buy.geni.us/Proxy.ashx?TSID=20968&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2FNautica-Voyage-Men-Toilette-Spray%2Fdp%2FB000P22TIY%2F%3Ftag%3Dfave-mens-cologne-20&amp;dtb=1" class="grey see" data-fave="36770" target="_blank" onclick="ga('send', 'event', 'Article > List', 'Item > Store > Click', 'Nautica Voyage By Nautica For Men Eau De Toilette Spray');">amazon.com</a>
+                            <i class="fa fa-tags" aria-hidden="true" style="background: white; color: #8EC47F;"></i> {{purchased}} Purchased • <a href="{{linkToAmazon}}">amazon.com</a>
                           </span>
                                     </div>
                                 </div>
                                 <!-- price-card -->
                             </div>
                             <div class="col-lg-6 col-lg-pull-6 col-sm-12">
-                                <h4 id="heart-heading-h4"><i class="fa fa-heart" aria-hidden="true" style="background: white; color: #8EC47F"></i>                                    Why People Love it</h4>
+                                <h4 id="heart-heading-h4"><i class="fa fa-heart" aria-hidden="true" style="background: white; color: #8EC47F"></i>Why People Love it</h4>
                                 <ul id="check-icons">
-                                    <li><i class="fa fa-check" aria-hidden="true" style="background: white; color: #8EC47F;padding-right:10px; margin-left:-25px;"></i>Fresh,
-                                        aquatic scent</li>
-                                    <li><i class="fa fa-check" aria-hidden="true" style="background: white; color: #8EC47F;padding-right:10px; margin-left:-25px;"></i>Perfect
-                                        for when it gets warm out</li>
-                                    <li><i class="fa fa-check" aria-hidden="true" style="background: white; color: #8EC47F;padding-right:10px; margin-left:-25px;"></i>Great
-                                        value</li>
+                                    {{#each threeWords}}
+                                    <li><i class="fa fa-check" aria-hidden="true" style="background: white; color: #8EC47F;padding-right:10px; margin-left:-25px;"></i>{{this}}</li>
+                                    {{/each}}
                                 </ul>
                             </div>
                         </div>
@@ -84,13 +77,11 @@
                         <!-- .line-title -->
                         <div class="product-tabs">
                             <div class="product-tab tab-pros active">
-                                <p>This simple fragrance is perfect for the beach bum who wants a light, almost aquatic, scent
-                                    to accompany them through a long day in the surf. This also happens to be a great value
-                                    cologne from a brand known for producing high-quality materials.</p>
+                                <p>{{pros}}</p>
                             </div>
                             <!-- .product-tab -->
                             <div class="product-tab tab-cons">
-                                <p>Doesn’t translate well into the colder months.</p>
+                                <p>{{cons}}</p>
                             </div>
                             <!-- .product-tab -->
                         </div>
@@ -105,11 +96,9 @@
                         </div>
                         <!-- .line-title -->
                         <div class="product-description">
-                            <p><strong>Scent</strong>: Airy, light, and fresh are the words most commonly associated with this
-                                fragrance—all qualities which combine to give off that aquatic feel.</p>
-                            <p><strong>Occasion</strong>: This is definitely something you wear over the summer, while on vacation,
-                                or on a boat.</p>
-                            <p><strong>Price</strong>: Talk about a steal.</p>
+                            {{#each details}}
+                            <p><strong>{{@key}}: </strong> {{this}}</p>
+                            {{/each}}
                         </div>
                     </div>
                     <!-- .sec -->
@@ -122,3 +111,4 @@
     </div>
     <!-- .container -->
 </article>
+{{/each}}
