@@ -22,16 +22,16 @@ class PageView {
         return loadRawTemplate(selector, 'about-us');
     }
 
-    blog(selector) {
-        return loadRawTemplate(selector, 'blog');
+    blog(selector, topics) {
+        return setHtmlWithCompiledData(selector, topics, 'blog');
     }
 
     cart(selector) {
         return loadRawTemplate(selector, 'cart');
     }
 
-    homePage(selector) {
-        loadRawTemplate(selector, 'home');
+    homePage(selector, homePage) {
+        return setHtmlWithCompiledData(selector, homePage, 'home');
     }
 
     profile(selector) {
@@ -42,11 +42,11 @@ class PageView {
         return setHtmlWithCompiledData(selector, products, 'shop');
     }
 
-    threads(selector) {
-        return loadRawTemplate(selector, 'threads');
+    threads(selector, threads) {
+        return setHtmlWithCompiledData(selector, threads, 'threads');
     }
-    threadsById(selector) {
-        return loadRawTemplate(selector, 'threadsById');
+    singlePost(selector, singlePost) {
+        return setHtmlWithCompiledData(selector, singlePost, 'singlePost');
     }
     threadsByIdWithComments(selector) {
         return loadRawTemplate(selector, 'threadsByIdWithComments');

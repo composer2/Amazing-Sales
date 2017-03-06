@@ -312,6 +312,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .stylish-input-group input[placeholder] {
+        font-size: 70%;
+    }
     #header-bar-nav {
         width: 98%;
     }
@@ -418,6 +421,9 @@ body {
 }
 
 @media screen and (max-width: 425px) {
+    .stylish-input-group input[placeholder] {
+        font-size: 120%;
+    }
     .logo {
         width: 130px;
     }

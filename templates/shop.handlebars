@@ -1,7 +1,7 @@
 {{#each products}}
 <article id="{{_id}}" class="product">
     <div class="container">
-        <div class="score"><a><span>{{@index}}</span></a></div>
+        <div class="score"><a><span>#{{inc @index}}</span></a></div>
         <h3 class="badge">
             <span class="ec">
             <i class="fa fa-check" aria-hidden="true" style="background: rgb(50, 146, 208); color:#8EC47F; "></i>{{name}}</span>
@@ -9,10 +9,10 @@
         <div class="inner">
             <div class="row">
                 <div class="col-lg-5 col-xl-4">
-                    <p class="product-title hidden-lg-up">
+                    {{!--<p class="product-title hidden-lg-up">
                         <a href="{{imageSource}}"
                             target="_blank">{{fullName}}</a>
-                    </p>
+                    </p>--}}
                     <div class="image">
                         <div class="responsive-container">
                             <div class="dummy"></div>

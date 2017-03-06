@@ -13,7 +13,6 @@ let $page = $('#page');
         });
 
         this.get('#/home', (context) => {
-            //page-css
             $("#page-css").attr("href", "./css/home.css");
             homeController.home(context, '#main-content');
         });
@@ -34,26 +33,15 @@ let $page = $('#page');
 
         this.get('#/blog', (context) => {
             $("#page-css").attr("href", "./css/blog.css");
-
             blogController.blog(context, '#main-content');
         });
-        this.get('#/blog/threads', (context) => {
+        this.get('#/blog/:threads', (context) => {
             $("#page-css").attr("href", "./css/blog.css");
-
-            // show-hide comments
-            $('#main-content').on('click', '#read-more-comments', function() {
-                $("#article-comments").toggleClass('hidden show');
-            });
-            $('#main-content').on('click', '#read-less', function() {
-                $("#article-comments").toggleClass('show hidden');
-            });
-
             blogController.threads(context, '#main-content');
         });
-        this.get('#/blog/threads/:id', (context) => {
+        this.get('#/blog/threads/:singlePost', (context) => {
             $("#page-css").attr("href", "./css/blog.css");
-
-            blogController.threadsById(context, '#main-content');
+            blogController.singlePost(context, '#main-content');
         });
         //sign in/out
         $("#sign-in-out").click(function() {
@@ -93,9 +81,9 @@ let $page = $('#page');
                 $('#main-content').removeClass('logged-in');
                 $("#sign-in-out").html("Sign in");
             }
-        })
-        // .then(() => {
-        //     return usersController.storeAllUsers();
-        // })
-        .then();
+        });
+    // .then(() => {
+    //     return usersController.storeAllUsers();
+    // })
+    // .then();
 })();

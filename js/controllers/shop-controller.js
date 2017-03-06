@@ -1,15 +1,12 @@
 import { pageView } from '../view/page-viewer.js';
 import { shopModel } from '../models/shop-model.js';
-class ShopController {
 
+class ShopController {
     shop(context, selector) {
         shopModel.getTop10Products()
             .then((res) => {
-                // res.sort((a, b) => {
-                //     return a.toLowerCase().localeCompare(b.toLowerCase());
-                // });
+                res.sort(this.compare);
                 let data = { products: res };
-                console.log(data);
                 pageView.shop(selector, data);
                 //pros n con labels
                 $('#main-content').on('click', '.cons', function() {
@@ -42,6 +39,14 @@ class ShopController {
                 //     context.redirect(`#/books-result?genre=${$this.html()}`);
                 // });
             });
+    }
+
+    compare(a, b) {
+        if (a.score > b.score)
+            return -1;
+        if (a.score < b.score)
+            return 1;
+        return 0;
     }
 }
 

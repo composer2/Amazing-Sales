@@ -155,13 +155,22 @@ body {
     left: 58%;
     width: 417px;
     height: 237px;
-    color: #fff;
+    color: #f0f0f0;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 20;
 }
 
+.header-text:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
 .header-text h2 {
     font-size: 20px;
+}
+
+.header-text:hover h2 {
+    color: orangered;
 }
 
 .header-text h2 span {
@@ -242,6 +251,11 @@ body {
 .home-page .recent-post h3,
 .home-page .recent-post p {
     padding-left: 6px;
+    text-align: center;
+}
+
+.home-page .recent-post p {
+    font-size: 16px;
 }
 
 .home-page .blog-media-bar li {
@@ -576,6 +590,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .stylish-input-group input[placeholder] {
+        font-size: 70%;
+    }
     #indicators {
         width: 98.1%;
         left: 30.9%;
@@ -744,6 +761,9 @@ body {
 }
 
 @media screen and (max-width: 425px) {
+    .stylish-input-group input[placeholder] {
+        font-size: 120%;
+    }
     .logo {
         width: 130px;
     }

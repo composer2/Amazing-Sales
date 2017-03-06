@@ -4,73 +4,32 @@
     </ol>
     <div class="row post-content">
         <section class="col-lg-8  col-md-8 col-sm-12 col-xs-12">
-            <h2>Trick N Tips For Beginners</h2>
+            {{#threads}}
+            <h2>{{topicName}}</h2>
             <hr>
             <ul class="blog-posts">
+                {{#each threads}}
                 <li>
                     <h3>
-                        <a href="#/blog/threads/:id">Are You Regular or Goofy?</a>
+                        <a href="#/blog/threads/{{threadName}}">{{threadName}}</a>
                     </h3>
                     <div class="blog-post-details">
-                        <img src="./images/johnDoe.jpg" alt="jon-doe" width="52" height="52"> <span class="blog-post-author">Posted by <a href="" class="posted-by">Admin</a>
-                            <date> on March 13, 2017 </date> | 30 Comments</span>
+                        <img src="{{authorImage}}" alt="jon-doe" width="52" height="52"> <span class="blog-post-author">Posted by <a href="" class="posted-by">{{postedBy}}</a>
+                            <date> {{threadDate}} </date> | {{comments.length}} Comments</span>
                     </div>
                     <article class="blog-post-summary">
-                        Thinking about hitting the slopes for the first time? One of the most important snowboarding basics for beginners to learn
-                        is the proper snowboarding stance. Since snowboarders ride with their body facing to the side, there
-                        are two different stances possible: a regular stance puts the left foot at the front of the board,
-                        while a goofy stance puts the right foot at the front.
+                        {{threadDescription}}
                     </article>
                     <div class="blog-post-tags">
-                        <span class="label label-default">goofy</span>
-                        <span class="label label-default">begginer</span>
-                        <span class="label label-default">leading leg</span>
+                        {{#each tag}}
+                        <span class="label label-default">{{this}}</span>
+                        {{/each}}
                     </div>
                     <hr>
                 </li>
-                <li>
-                    <h3>
-                        <a href="#/blog/threads/:id">Are You Regular or Goofy?</a>
-                    </h3>
-                    <div class="blog-post-details">
-                        <img src="./images/johnDoe.jpg" alt="jon-doe" width="52" height="52"> <span class="blog-post-author">Posted by <a href="" class="posted-by">Admin</a>
-                            <date> on March 13, 2017 </date> | 30 Comments</span>
-                    </div>
-                    <article class="blog-post-summary">
-                        Thinking about hitting the slopes for the first time? One of the most important snowboarding basics for beginners to learn
-                        is the proper snowboarding stance. Since snowboarders ride with their body facing to the side, there
-                        are two different stances possible: a regular stance puts the left foot at the front of the board,
-                        while a goofy stance puts the right foot at the front.
-                    </article>
-                    <div class="blog-post-tags">
-                        <span class="label label-default">goofy</span>
-                        <span class="label label-default">begginer</span>
-                        <span class="label label-default">leading leg</span>
-                    </div>
-                    <hr>
-                </li>
-                <li>
-                    <h3>
-                        <a href="#/blog/threads/:id">Are You Regular or Goofy?</a>
-                    </h3>
-                    <div class="blog-post-details">
-                        <img src="./images/johnDoe.jpg" alt="jon-doe" width="52" height="52"> <span class="blog-post-author">Posted by <a href="" class="posted-by">Admin</a>
-                            <date> on March 13, 2017 </date> | 30 Comments</span>
-                    </div>
-                    <article class="blog-post-summary">
-                        Thinking about hitting the slopes for the first time? One of the most important snowboarding basics for beginners to learn
-                        is the proper snowboarding stance. Since snowboarders ride with their body facing to the side, there
-                        are two different stances possible: a regular stance puts the left foot at the front of the board,
-                        while a goofy stance puts the right foot at the front.
-                    </article>
-                    <div class="blog-post-tags">
-                        <span class="label label-default">goofy</span>
-                        <span class="label label-default">begginer</span>
-                        <span class="label label-default">leading leg</span>
-                    </div>
-                    <hr>
-                </li>
+                {{/each}}
             </ul>
+            {{/threads}}
         </section>
         <aside class="col-lg-4  col-md-4 col-sm-12 col-xs-12">
             <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
@@ -89,13 +48,12 @@
             <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
                 <ul>
                     <h3 class="text-left">Archives</h3>
-                    <div>
-                        <li class="text-left"><a href=""><span>Snowboard tricks</span></a></li>
-                        <li class="text-left"><a href=""><span>How to hip jumps</span></a></li>
-                        <li class="text-left"><a href=""><span>Garet T. interview</span></a></li>
-                        <li class="text-left"><a href=""><span>Best for begginers</span></a></li>
-                        <li class="text-left"><a href=""><span>From zero to GoPro</span></a></li>
-                        <li class="text-left"><a href=""><span>10 gajets under 50$</span></a></li>
+                    <div>                            
+                        <li class="text-left"><a href=""><span>Avalanche makers</span></a></li>
+                        <li class="text-left"><a href=""><span>Left alone...</span></a></li>
+                        <li class="text-left"><a href=""><span>Starter pack</span></a></li>
+                        <li class="text-left"><a href=""><span>New Year's Eve</span></a></li>
+                        <li class="text-left"><a href=""><span>Last season tops</span></a></li>
                     </div>
                 </ul>
             </div>
@@ -103,12 +61,11 @@
                 <ul>
                     <h3 class="text-left">Recent Post</h3>
                     <div>
-                        <li class="text-left"><a href=""><span>Snowboard tricks</span></a></li>
+                        <li class="text-left"><a href=""><span>Ski or Snowboard</span></a></li>
                         <li class="text-left"><a href=""><span>How to hip jumps</span></a></li>
-                        <li class="text-left"><a href=""><span>Garet T. interview</span></a></li>
-                        <li class="text-left"><a href=""><span>Best for begginers</span></a></li>
-                        <li class="text-left"><a href=""><span>From zero to GoPro</span></a></li>
-                        <li class="text-left"><a href=""><span>10 gajets under 50$</span></a></li>
+                        <li class="text-left"><a href=""><span>Best countries for...</span></a></li>
+                        <li class="text-left"><a href=""><span>Upcomming events</span></a></li>
+                        <li class="text-left"><a href=""><span>Tips for begginers</span></a></li>
                     </div>
                 </ul>
             </div>

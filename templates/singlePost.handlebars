@@ -1,0 +1,126 @@
+{{#thread}}
+<div class="container blog-page">
+    <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+    </ol>
+    <div class="row">
+        <div id="category-title">
+            <h1 class="text-center"><strong>{{topicName}}</strong></h1>
+            <h3 class="text-center">{{topicShortDescription}}</h3>
+        </div>
+    </div>
+    <div class="row post-content">
+        {{/thread}}
+        <section class="col-lg-8  col-md-8 col-sm-12 col-xs-12">
+            {{#singlePost}}
+            <div class="post">
+                <h1>{{threadName}}</h1>
+                <hr>
+                <h5>Posted by <a href="" class="posted-by">{{postedBy}}</a>
+                    <date> {{threadDate}} in </date>
+                    <a href="" class="posted-by"></a> | {{comments.length}} Comments</h5>
+                <hr>
+                <img src="{{authorImage}}" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
+                <article id="post-article">
+                    <h5>
+                        {{threadDescription}}
+                    </h5>
+                </article>
+                <a id="read-more-comments" class="btn btn-default btn-blog pull-right">Read More</a>
+            </div>
+            <div id="article-comments" class="hidden">
+                <div id="comments">
+                    <br>
+                    <h1>{{comments.length}} Comments</h1>
+                    {{#each comments}}
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="{{authorImage}}" alt="{{postedBy}}" class="pull-left">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading text-left">{{postedBy}}</h3>
+                            <p id="nested-author1" class="text-right"><small><i>Posted on {{commentDate}}</i></small></p>
+                            <p class="nested-p-mobile">{{comment}}</p>
+                            <a class="comment-question" href="" class="btn btn-default btn-blog pull-right">Read More</a>
+                        </div>
+                    </div>
+                    {{#each reply}}
+                    <div class="media nested">
+                        <div class="media-left">
+                            <img src="{{authorImage}}" alt="{{postedBy}}" class="pull-left">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">{{postedBy}}</h3>
+                            <p id="nested-author2" class="text-right"><small><i>Posted on {{commentDate}}</i></small></p>
+                            <p class="nested-p nested-p-mobile">{{comment}}</p>
+                            <a class="comment-answer" href="" class="btn btn-default btn-blog pull-right">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}} 
+                {{/each}}
+                <div id="comment-reply">
+                    <div class="row">
+                        <h1>Leave a Reply</h1>
+                        <form class="col-sm-12">
+                            <fieldset>
+                                <input type="text" id="name" name="name" class="input-block-level" placeholder="Name">
+                                <input type="text" id="email" name="email" class="input-block-level" placeholder="Email">
+                                <textarea rows="3" id="description" name="message" class="input-block-level" placeholder="Message"></textarea>
+                                <button type="submit" class="btn btn-default pull-right">Submit</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <a id="read-less" class="btn btn-default btn-blog pull-right">Read Less</a>
+            </div>
+            {{/singlePost}}
+        </section>
+        <aside class="col-lg-4  col-md-4 col-sm-12 col-xs-12">
+            <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
+                <ul>
+                    <h3 class="text-left">From The Blog</h3>
+                    <div>
+                        <li class="text-left"><a href=""><span>Snowboard tricks</span></a></li>
+                        <li class="text-left"><a href=""><span>How to hip jumps</span></a></li>
+                        <li class="text-left"><a href=""><span>Garet T. interview</span></a></li>
+                        <li class="text-left"><a href=""><span>Best for begginers</span></a></li>
+                        <li class="text-left"><a href=""><span>From zero to GoPro</span></a></li>
+                        <li class="text-left"><a href=""><span>10 gajets under 50$</span></a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
+                <ul>
+                    <h3 class="text-left">Archives</h3>
+                    <div>
+                        <li class="text-left"><a href=""><span>Avalanche makers</span></a></li>
+                        <li class="text-left"><a href=""><span>Left alone...</span></a></li>
+                        <li class="text-left"><a href=""><span>Starter pack</span></a></li>
+                        <li class="text-left"><a href=""><span>New Year's Eve</span></a></li>
+                        <li class="text-left"><a href=""><span>Last season tops</span></a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
+                <ul>
+                    <h3 class="text-left">Recent Post</h3>
+                    <div>
+                        <li class="text-left"><a href=""><span>Ski or Snowboard</span></a></li>
+                        <li class="text-left"><a href=""><span>How to hip jumps</span></a></li>
+                        <li class="text-left"><a href=""><span>Best countries for...</span></a></li>
+                        <li class="text-left"><a href=""><span>Upcomming events</span></a></li>
+                        <li class="text-left"><a href=""><span>Tips for begginers</span></a></li>
+                    </div>
+                </ul>
+            </div>
+        </aside>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-offset-7 col-md-offset-7 col-sm-offset-6 col-xs-offset-5">
+            <ul class="page-pagination">
+                <li class="selected"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

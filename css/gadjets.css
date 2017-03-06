@@ -601,8 +601,6 @@
 
 .product-description {
     position: relative;
-    max-height: 15.1em;
-    overflow: hidden;
 }
 
 .product-description.show {
@@ -3998,10 +3996,6 @@ h6.no-results {
 
 /**/
 
-.product-description {
-    max-height: 14.5em;
-}
-
 .article-description {
     position: relative;
     overflow: hidden;
@@ -5283,6 +5277,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .stylish-input-group input[placeholder] {
+        font-size: 70%;
+    }
     #header-bar-nav {
         width: 98%;
     }
@@ -5399,6 +5396,9 @@ body {
 }
 
 @media screen and (max-width: 425px) {
+    .stylish-input-group input[placeholder] {
+        font-size: 120%;
+    }
     .logo {
         width: 130px;
     }

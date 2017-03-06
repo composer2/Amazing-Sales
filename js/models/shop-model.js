@@ -17,10 +17,8 @@ class ShopModel {
             let options = { headers };
             requester.get(url, options)
                 .then((res) => {
-                    console.log(res);
                     resolve(res);
                 }, (err) => {
-                    console.log(err);
                     reject(err);
                 });
         });
