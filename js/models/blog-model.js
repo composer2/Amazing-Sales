@@ -54,6 +54,21 @@ class BlogModel {
         });
         return promise;
     }
+    updateSinglePost(id, data) {
+        let promise = new Promise((resolve, reject) => {
+            let url = kinvey_URL + 'appdata/' + kinvey_APP_ID + '/forum/' + id
+            let authBase64 = btoa(kinvey_APP_ID + ":" + kinvey_MASTER_SECRET);
+            let headers = { Authorization: "Basic " + authBase64 }
+            let options = { headers, data };
+            requester.put(url, options)
+                .then((res) => {
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+        });
+        return promise;
+    }
 }
 
 let blogModel = new BlogModel();

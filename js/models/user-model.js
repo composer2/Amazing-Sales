@@ -5,6 +5,9 @@ const STORAGE_AUTH_KEY = 'STORAGE_AUTHENTICATION_KEY';
 const STORAGE_USERNAMES_AND_ID = 'STORAGE_USERNAMES';
 const STORAGE_USERNAME = 'STORAGE_USERNAME';
 const STORAGE_USERNAME_ID = 'STORAGE_USERNAME_ID';
+const STORAGE_USERNAME_IMAGE = 'STORAGE_USERNAME_IMAGE';
+const DEFAULT_IMAGE = 'https://cdn.pbrd.co/images/I7tGDp00I.png';
+
 const kinvey_APP_ID = 'kid_BkuT-lUql';
 const kinvey_APP_SECRET = 'b92b557c5d1f4edca34238eca4e1b481';
 const kinvey_MASTER_SECRET = 'bab6be0bbcb647729a5d93b1bc1f1413';
@@ -52,6 +55,7 @@ class UserModel {
                     localStorage.setItem(STORAGE_USERNAME, res.username);
                     localStorage.setItem(STORAGE_USERNAME_ID, res._id);
                     localStorage.setItem(STORAGE_AUTH_KEY, res._kmd.authtoken);
+                    localStorage.setItem(STORAGE_USERNAME_IMAGE, res.userImage || DEFAULT_IMAGE);
                     resolve(res);
                 }, function(err) {
                     reject(err);
