@@ -55,7 +55,7 @@ class UserModel {
                     localStorage.setItem(STORAGE_USERNAME, res.username);
                     localStorage.setItem(STORAGE_USERNAME_ID, res._id);
                     localStorage.setItem(STORAGE_AUTH_KEY, res._kmd.authtoken);
-                    localStorage.setItem(STORAGE_USERNAME_IMAGE, res.userImage || DEFAULT_IMAGE);
+                    localStorage.setItem(STORAGE_USERNAME_IMAGE, res.image || DEFAULT_IMAGE);
                     resolve(res);
                 }, function(err) {
                     reject(err);
@@ -111,27 +111,39 @@ class UserModel {
 
     getCurrentUserInfo() {
         let promise = new Promise((resolve, reject) => {
-            let currUserNickname = localStorage.getItem(STORAGE_USERNAME);
-            let users = JSON.parse(localStorage.getItem(STORAGE_USERNAMES_AND_ID));
-            let currUserId;
-            for (let id in users) {
-                if (users[id] === currUserNickname) {
-                    currUserId = id;
-                    break;
-                }
-            }
-
-            let url = `api/users/${currUserId}`;
-
-            requester.get(url)
-                .then((res) => {
+            let url = kinvey_URL + 'user/' + kinvey_APP_ID + '/' + localStorage.getItem(STORAGE_USERNAME_ID);
+            let authBase64 = btoa(kinvey_APP_ID + ":" + kinvey_APP_SECRET);
+            let headers = { Authorization: "Kinvey " + localStorage.getItem(STORAGE_AUTH_KEY) }
+            let options = { headers };
+            requester.get(url, options)
+                .then(function(res) {
                     resolve(res);
-                }, (err) => {
+                }, function(err) {
                     reject(err);
                 });
         });
-
         return promise;
+    }
+    updateProfile(data) {
+        let promise = new Promise((resolve, reject) => {
+            let url = kinvey_URL + 'user/' + kinvey_APP_ID + '/' + localStorage.getItem(STORAGE_USERNAME_ID);
+            let authBase64 = btoa(kinvey_APP_ID + ":" + kinvey_APP_SECRET);
+            let headers = { Authorization: "Kinvey " + localStorage.getItem(STORAGE_AUTH_KEY) }
+            let options = { headers, data };
+            requester.put(url, options)
+                .then(function(res) {
+                    localStorage.setItem(STORAGE_USERNAME, res.username);
+                    localStorage.setItem(STORAGE_USERNAME_ID, res._id);
+                    localStorage.setItem(STORAGE_AUTH_KEY, res._kmd.authtoken);
+                    localStorage.setItem(STORAGE_USERNAME_IMAGE, res.image || DEFAULT_IMAGE);
+                    resolve(res);
+                }, function(err) {
+                    reject(err);
+                });
+        });
+        return promise;
+        console.log("Updated");
+        console.log(data);
     }
 }
 

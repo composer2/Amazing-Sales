@@ -2,6 +2,7 @@ import { pageView } from '../view/page-viewer.js';
 import { userModel } from '../models/user-model.js';
 import { notificator } from '../helpers/notificator.js';
 
+const STORAGE_USERNAME_IMAGE = 'STORAGE_USERNAME_IMAGE';
 
 class UserController {
     signInUp() {
@@ -49,76 +50,63 @@ class UserController {
     }
 
     profile(context, selector) {
-        let currentUserInfo, bookToRead, bookCurrentlyReading, bookRead;
+        let formData;
         userModel.getCurrentUserInfo()
-            .then((resCurrentUserInfo) => {
-                currentUserInfo = resCurrentUserInfo;
-
-                if (currentUserInfo.booksRead.length > 0) {
-                    return booksModel.getSingleBookInfo(currentUserInfo.booksRead[0]._id);
-                }
-            })
-            .then((resBookRead) => {
-
-                bookRead = resBookRead;
-                if (currentUserInfo.booksCurrentlyReading.length > 0) {
-                    return booksModel.getSingleBookInfo(currentUserInfo.booksCurrentlyReading[0]._id);
-                }
-            })
-            .then((resBookCurrentlyReading) => {
-                bookCurrentlyReading = resBookCurrentlyReading;
-                if (currentUserInfo.booksToRead.length > 0) {
-                    return booksModel.getSingleBookInfo(currentUserInfo.booksToRead[0]._id);
-                }
-            })
-            .then((resBookToRead) => {
-                bookToRead = resBookToRead;
+            .then((res) => {
+                formData = res;
                 let data = {
-                    currentUserInfo,
-                    bookToRead,
-                    bookCurrentlyReading,
-                    bookRead
+                    username: res.username,
+                    phone: res.phone,
+                    address: res.address,
+                    gender: res.gender,
+                    email: res.email,
+                    lastname: res.lastname,
+                    firstname: res.firstname,
+                    image: res.imgae || localStorage.getItem(STORAGE_USERNAME_IMAGE)
                 };
-
                 pageView.profilePage(selector, data);
-                return userModel.newsfeed();
-            })
-            .then((news) => {
-                pageView.newsfeed('#newsfeed', news);
-            })
-            .then(() => {
-                // $('#newsfeed').on('click', '.like', function(){
-                //     let newsId = $(this).parents('.new-wrapper')
-                //         .attr('data-id');
-                //     userModel.like(newsId)
-                //         .then((res)=>{
-                //             console.log(res);
-                //         }, (err)=>{
-                //             console.log(err);
-                //         });
-                // });   
-                // Cause Server Error update.likes.push is nof a function
 
-                // $('#newsfeed').on('click', '.btn-add-comment', function () {
-                //     let $this = $(this);
-                //     let comment = $this
-                //         .prev()
-                //         .val();
+            }, (err) => {
+                console.log(err);
+            }).then(() => {
+                $('#main-content').on('click', '#edit-profile-button', function() {
+                    $("#user-ready-data").addClass("hidden");
+                    $("#user-changing-data").removeClass("hidden");
+                });
+                $('#main-content').on('click', '#save-profile-changes-btn', function() {
+                    //update the profile data and display it
+                    let data = {
+                        "firstname": $("#textinputFirstname").val(),
+                        "lastname": $("#textinputLastname").val(),
+                        "gender": $("#selectbasic option:selected").html(),
+                        "phone": $("#textinputPhone").val(),
+                        "address": $("#textinputAddress").val(),
+                        "image": $("#textinputPhotolink").val(),
+                        "email": $("#textinputE-mail").val()
+                    }
 
-                //     let newsId = $this
-                //         .parents('.new-wrapper')
-                //         .attr('data-id');
+                    $('#set-image').attr("src", data.image);
+                    $('#set-firstname').html(data.firstname);
+                    $('#set-lastname').html(data.lastname);
+                    $('#set-email').html(data.email);
+                    $('#set-gender').html(data.gender);
+                    $('#set-address').html(data.address);
+                    $('#set-phone').html(data.phone);
 
-                //     userModel.comment(comment, newsId)
-                //         .then((res)=>{
-                //             console.log(res);
-                //         }, (err)=>{
-                //             console.log(err);
-                //         });
-                // });
-                //Works only with old updates
+
+                    $("#user-ready-data").removeClass("hidden");
+                    $("#user-changing-data").addClass("hidden");
+                    notificator.success('Profile Successfully Updated');
+                    userModel.updateProfile(data);
+                });
+                $('#main-content').on('click', '#cancel-profile-changes-btn', function() {
+                    //cancel any changes
+                    $("#user-ready-data").removeClass("hidden");
+                    $("#user-changing-data").addClass("hidden");
+                    notificator.success('All Changes Canceled');
+                });
             });
-    }
+    };
 
     isUserLoggedIn() {
         return userModel.isLoggedIn();

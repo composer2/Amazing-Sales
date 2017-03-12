@@ -17,9 +17,10 @@ let $page = $('#page');
             homeController.home(context, '#main-content');
         });
 
-        // this.get('#/profile', (context) => {
-        //     usersController.profile(context, '#main-content');
-        // });
+        this.get('#/profile', (context) => {
+            $("#page-css").attr("href", "./css/about-us.css");
+            usersController.profile(context, '#main-content');
+        });
 
         this.get('#/about-us', (context) => {
             $("#page-css").attr("href", "./css/about-us.css");
@@ -77,9 +78,11 @@ let $page = $('#page');
             if (isLoggedIn) {
                 $('#main-content').addClass('logged-in');
                 $("#sign-in-out").html("Sign out");
+                $('#profile-show-hide').removeClass('hidden');
             } else {
                 $('#main-content').removeClass('logged-in');
                 $("#sign-in-out").html("Sign in");
+                $('#profile-show-hide').addClass('hidden');
             }
         });
     // .then(() => {

@@ -1,1 +1,131 @@
-<h1>Hello profile</h1>
+<div class="container">
+    <div id="user-ready-data" class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 toppad">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{username}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 " align="center"> <img id="set-image" alt="User Pic" src="{{image}}" class="img-circle img-responsive"> </div>
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td>Firstname</td>
+                                        <td id="set-firstname">{{firstname}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lastname</td>
+                                        <td id="set-lastname">{{lastname}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>E-mail</td>
+                                        <td id="set-email">{{email}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <tr>
+                                            <td>Gender</td>
+                                            <td id="set-gender">{{gender}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Address</td>
+                                            <td id="set-address">{{address}}</td>
+                                        </tr>
+                                        <td>Phone</td>
+                                        <td id="set-phone">{{phone}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="center-block text-center">
+                        <a id="edit-profile-button" type="submit" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"> Edit</i></a>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="user-changing-data" class="row hidden">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 toppad">
+            <form class="form-horizontal">
+                <fieldset>
+                    <!-- first name -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinputFirstname">Firstname</label>
+                        <div class="col-md-4">
+                            <input id="textinputFirstname" type="text" placeholder="Firstname" class="form-control input-md" value="{{firstname}}">
+                        </div>
+                    </div>
+
+                    <!-- lastname -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinputLastname">Lastname</label>
+                        <div class="col-md-4">
+                            <input id="textinputLastname" type="text" placeholder="Lastname" class="form-control input-md" value="{{lastname}}">
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinputE-mail">E-mail</label>
+                        <div class="col-md-4">
+                            <input id="textinputE-mail" type="text" placeholder="E-mail" class="form-control input-md" value="{{email}}">
+                        </div>
+                    </div>
+
+                    <!-- Select Gender -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="selectbasic">Gender</label>
+                        <div class="col-md-4">
+                            <select id="selectbasic" class="form-control">
+                              <option value="1">Female</option>
+                              <option value="2">Male</option>
+                              <option value="2">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinputAddress">Address</label>
+                        <div class="col-md-4">
+                            <input id="textinputAddress" type="text" placeholder="Address" class="form-control input-md" value="{{address}}">
+                        </div>
+                    </div>
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinputPhone">Phone</label>
+                        <div class="col-md-4">
+                            <input id="textinputPhone" type="text" placeholder="Phone" class="form-control input-md" value="{{phone}}">
+                        </div>
+                    </div>
+
+                    <!-- Photo -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinputPhotolink">Photo link</label>
+                        <div class="col-md-4">
+                            <input id="textinputPhotolink" type="text" placeholder="Place a Link" class="form-control input-md" value="{{image}}">
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="save-profile-changes-btn"></label>
+                        <div class="col-md-4">
+                            <a id="save-profile-changes-btn" name="singlebutton" class="btn btn-primary">Save</a>
+                            <a id="cancel-profile-changes-btn" name="singlebutton2" class="btn btn-primary">Cancel</a>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+</div>

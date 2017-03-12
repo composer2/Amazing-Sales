@@ -51,10 +51,9 @@ class PageView {
     threadsByIdWithComments(selector) {
         return loadRawTemplate(selector, 'threadsByIdWithComments');
     }
-
-    // profilePage(selector, data) {
-    //     return setHtmlWithCompiledData(selector, data, 'profile');
-    // }
+    profilePage(selector, profile) {
+        return setHtmlWithCompiledData(selector, profile, 'profile');
+    }
 
 }
 

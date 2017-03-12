@@ -1,5 +1,7 @@
 import { pageView } from '../view/page-viewer.js';
 import { blogModel } from '../models/blog-model.js';
+import { notificator } from '../helpers/notificator.js';
+
 
 const STORAGE_USERNAME_IMAGE = 'STORAGE_USERNAME_IMAGE';
 const USER_IMAGE = localStorage.getItem(STORAGE_USERNAME_IMAGE) || "https://cdn.pbrd.co/images/I7tGDp00I.png";;
@@ -22,17 +24,21 @@ class BlogController {
     }
 
     threads(context, selector) {
-        let _this = this;
         blogModel.getAllThreads(context.params.threads)
             .then((res) => {
                 let data = {
                     threads: res[0]
                 };
-                console.log(res);
-                _this.singleThread_id = res[0]._id;
                 pageView.threads(selector, data);
             }, (err) => {
                 console.log(err);
+            }).then(() => {
+                $('#main-content').on('click', ".button-new-post", function() {
+                    $(".new-post-form").removeClass('hidden');
+                });
+                $('#main-content').on('click', ".submit-new-post", function() {
+                    $(".new-post-form").addClass('hidden');
+                });
             });
     }
 
@@ -94,6 +100,7 @@ class BlogController {
                 "topicShortDescription": data.thread.topicShortDescription
             }
             blogModel.updateSinglePost(data.thread._id, updatedData)
+            notificator.success('Comment Added Successfully');
         });
         //reply 
         $('#main-content').on('click', '.comment-question', function() {
@@ -141,6 +148,7 @@ class BlogController {
             }
             blogModel.updateSinglePost(data.thread._id, updatedData)
             $(".hello").remove();
+            notificator.success('Comment Added Successfully');
         });
 
 

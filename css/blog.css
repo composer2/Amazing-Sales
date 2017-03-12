@@ -225,6 +225,10 @@ body {
     min-height: 730px;
 }
 
+.post-content .button-color:hover {
+    color: orangered;
+}
+
 .post-content .posted-by {
     color: #929292;
     text-decoration: none;
