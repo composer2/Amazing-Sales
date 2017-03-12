@@ -35,6 +35,7 @@ class UserModel {
                     localStorage.setItem(STORAGE_USERNAME, res.username);
                     localStorage.setItem(STORAGE_USERNAME_ID, res._id);
                     localStorage.setItem(STORAGE_AUTH_KEY, res._kmd.authtoken);
+                    localStorage.setItem(STORAGE_USERNAME_IMAGE, res.image || DEFAULT_IMAGE);
                     resolve(res);
                 }, function(err) {
                     reject(err.responseText);
@@ -83,6 +84,7 @@ class UserModel {
                     localStorage.removeItem(STORAGE_AUTH_KEY);
                     localStorage.removeItem(STORAGE_USERNAME);
                     localStorage.removeItem(STORAGE_USERNAME_ID);
+                    localStorage.removeItem(STORAGE_USERNAME_IMAGE);
                     resolve(res);
                 }, function(err) {
                     reject(err);

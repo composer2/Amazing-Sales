@@ -17,9 +17,9 @@
                     <div class="row">
                         <h1>Create New Post</h1>
                         <form id="comment-form-reset" class="col-sm-12">
-                                <input type="text" id="name" name="Post Heading"  placeholder="Post Heading" required>
-                                <input type="text" id="email" name="Tags"  placeholder="Tags (space separated)" required>
-                                <textarea rows="3" id="description" name="Post description"  placeholder="Post description" required></textarea>                                
+                                <input type="text" id="name" name="Post Heading"  placeholder="Post Heading" class="new-post-heading" required>
+                                <input type="text" id="email" name="Tags"  placeholder="Tags (space separated)" class="new-post-tags" required>
+                                <textarea rows="3" id="description" name="Post description"  placeholder="Post description" required class="new-post-description"></textarea>                                
                                 <a type="submit" class="btn btn-default pull-right submit-new-post">Submit</a>
                         </form>
                     </div>
@@ -28,7 +28,7 @@
             <hr>
             <ul class="blog-posts">
                 {{#each threads}}
-                <li>
+                <li class="new-post-content">
                     <h3>
                         <a href="#/blog/threads/{{threadName}}">{{threadName}}</a>
                     </h3>

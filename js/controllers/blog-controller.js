@@ -3,6 +3,8 @@ import { blogModel } from '../models/blog-model.js';
 import { notificator } from '../helpers/notificator.js';
 
 
+const STORAGE_USERNAME = 'STORAGE_USERNAME';
+const POSTED_BY = localStorage.getItem(STORAGE_USERNAME) || "Guest"
 const STORAGE_USERNAME_IMAGE = 'STORAGE_USERNAME_IMAGE';
 const USER_IMAGE = localStorage.getItem(STORAGE_USERNAME_IMAGE) || "https://cdn.pbrd.co/images/I7tGDp00I.png";;
 
@@ -24,11 +26,15 @@ class BlogController {
     }
 
     threads(context, selector) {
+        let self = this;
+        let data;
         blogModel.getAllThreads(context.params.threads)
             .then((res) => {
-                let data = {
+
+                data = {
                     threads: res[0]
                 };
+                console.log(res[0]._id);
                 pageView.threads(selector, data);
             }, (err) => {
                 console.log(err);
@@ -37,6 +43,23 @@ class BlogController {
                     $(".new-post-form").removeClass('hidden');
                 });
                 $('#main-content').on('click', ".submit-new-post", function() {
+                    // create new post
+                    let newData = {
+                            "authorImage": data.threads.authorImage,
+                            "postedBy": data.threads.postedBy,
+                            "threads": data.threads.threads,
+                            "topicDate": data.threads.topicDate,
+                            "topicImage": data.threads.topicImage,
+                            "topicName": data.threads.topicName,
+                            "topicShortDescription": data.threads.topicShortDescription
+                        }
+                        // add to DOM
+                    let newPost = self.addPost();
+                    newData.threads.push(newPost);
+                    blogModel.updateSinglePost(data.threads._id, newData)
+                        // add the new post
+                    pageView.threads(selector, data);
+                    notificator.success("Post Created Successfully ")
                     $(".new-post-form").addClass('hidden');
                 });
             });
@@ -177,6 +200,20 @@ class BlogController {
         }
         $("#comment-form-reset")[0].reset();
         return comment;
+    }
+    addPost() {
+        var date = new Date();
+        var newDate = date.toUTCString().split(" ");
+        let newThread = {
+            "authorImage": USER_IMAGE,
+            "comments": [],
+            "postedBy": POSTED_BY,
+            "tag": $(".new-post-tags").val().split(" "),
+            "threadDate": newDate[2] + " " + newDate[1] + ", " + newDate[3],
+            "threadDescription": $(".new-post-description").val(),
+            "threadName": $(".new-post-heading").val(),
+        }
+        return newThread;
     }
 }
 

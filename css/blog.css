@@ -272,6 +272,8 @@ body {
 }
 
 .post-content section img {
+    max-width: 290px;
+    max-height: 290px;
     border-radius: 0;
     margin-right: 30px;
 }
