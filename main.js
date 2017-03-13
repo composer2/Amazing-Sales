@@ -44,29 +44,6 @@ let $page = $('#page');
             $("#page-css").attr("href", "./css/blog.css");
             blogController.singlePost(context, '#main-content');
         });
-        //sign in/out
-        $("#sign-in-out").click(function() {
-            var text = $(this).html();
-            if (text === "Sign in") {
-                text = "Sign out";
-                $('#nav-collapse2').addClass('in')
-            } else if (text === "Sign out") {
-                text = "Sign in";
-                $('#nav-collapse2').removeClass('in')
-                if ($('#main-content').hasClass('logged-in')) {
-                    usersController.logout();
-                }
-            }
-            $(this).html(text);
-        });
-
-        $('#sign-in-btn').click(function() {
-            usersController.signInUp();
-        });
-        $('#register-btn').click(function() {
-            usersController.register();
-        });
-
     });
 
     $(function() {
@@ -85,8 +62,4 @@ let $page = $('#page');
                 $('#profile-show-hide').addClass('hidden');
             }
         });
-    // .then(() => {
-    //     return usersController.storeAllUsers();
-    // })
-    // .then();
 })();
