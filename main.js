@@ -3,8 +3,6 @@ import { usersController } from './js/controllers/users-controller.js';
 import { blogController } from './js/controllers/blog-controller.js';
 import { shopController } from './js/controllers/shop-controller.js';
 
-let $page = $('#page');
-
 (function() {
     let sammyApp = Sammy('#main-content', function() {
 
