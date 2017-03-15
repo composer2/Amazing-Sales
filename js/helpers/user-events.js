@@ -2,6 +2,8 @@ import { pageView } from '../view/page-viewer.js';
 import { userModel } from '../models/user-model.js';
 import { notificator } from '../helpers/notificator.js';
 
+const STORAGE_USERNAME_IMAGE = 'STORAGE_USERNAME_IMAGE';
+
 let userEvents = (function() {
 
     function showProfile() {
@@ -60,7 +62,7 @@ let userEvents = (function() {
         });
     }
 
-    function updateDataProfile() {
+    function updateDataProfile(res) {
         return {
             username: res.username,
             phone: res.phone,

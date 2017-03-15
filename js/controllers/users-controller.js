@@ -3,8 +3,6 @@ import { userModel } from '../models/user-model.js';
 import { notificator } from '../helpers/notificator.js';
 import { userEvents } from '../helpers/user-events.js';
 
-const STORAGE_USERNAME_IMAGE = 'STORAGE_USERNAME_IMAGE';
-
 class UserController {
     signInUp() {
         let user = {
@@ -49,7 +47,7 @@ class UserController {
     profile(context, selector) {
         userModel.getCurrentUserInfo()
             .then((res) => {
-                let data = userEvents.updateDataProfile();
+                let data = userEvents.updateDataProfile(res);
                 return pageView.profilePage(selector, data);
             }, (err) => {
                 console.log(err);

@@ -177,6 +177,10 @@ body {
     padding: 10px;
 }
 
+.header-text h4 span {
+    font-size: 18px;
+}
+
 .header-text h6 {
     opacity: 1;
     position: absolute;
@@ -539,6 +543,9 @@ body {
         width: 86px;
         height: 26px;
     }
+    .header-text h4 {
+        margin-top: -10px;
+    }
     #header-bar-nav {
         width: 94.50%;
     }
@@ -608,6 +615,13 @@ body {
         left: 214px;
         width: 86px;
         height: 26px;
+    }
+    .header-text h4 {
+        margin-top: -20px;
+        line-height: 14px;
+    }
+    .header-text h4 span {
+        font-size: 14px;
     }
     #prev {
         margin-top: 40px;
