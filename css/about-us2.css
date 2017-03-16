@@ -1,0 +1,33 @@
+.about-us {
+    background: white;
+    width: 90.1%;
+    padding: 0;
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
+.about-us .about-us-img {
+    padding-bottom: 20px;
+}
+
+.about-us .about-us-h2 {
+    padding: 15px;
+    line-height: 38px;
+    text-indent: 50px;
+    text-align: justify;
+}
+
+
+/*media queries*/
+
+@media screen and (max-width: 768px) {
+    .about-us .about-us-h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-us .about-us-h2 {
+        font-size: 1.2em;
+    }
+}
