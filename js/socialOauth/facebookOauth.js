@@ -30,6 +30,9 @@
           }
           console.log("Initial state");
           console.log(response);
+          FB.api(FACEBOOK_userID, function(response) {
+              console.log(response);
+          });
       });
 
   };
