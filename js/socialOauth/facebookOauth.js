@@ -14,16 +14,11 @@
 
       FB.getLoginStatus(function(response) {
           if (response.status === "connected") {
-              // user is logged in with facebook and our app
-
+              // user is logged in with facebook
               localStorage.setItem(FACEBOOK_accessToken, response.authResponse.accessToken);
               localStorage.setItem(FACEBOOK_expiresIn, response.authResponse.expiresIn);
               localStorage.setItem(FACEBOOK_signedRequest, response.authResponse.signedRequest);
               localStorage.setItem(FACEBOOK_userID, response.authResponse.userID);
-
-              $('#main-content').addClass('logged-in');
-              $("#sign-in-out").html("Sign out");
-              $('#profile-show-hide').removeClass('hidden');
           } else if (response.status === "not_authorized" || response.status === "unknown ") {
               // promt the user to loggin
               $(".facebook-login").on('click', function() {
@@ -32,10 +27,6 @@
                       console.log(response)
                   })
               })
-          } else {
-              $('#main-content').removeClass('logged-in');
-              $("#sign-in-out").html("Sign in");
-              $('#profile-show-hide').addClass('hidden');
           }
           console.log("Initial state");
           console.log(response);
