@@ -7,14 +7,14 @@ Online store and blog
 
 <h1 align="center">Slice and dice final project - "Amazing sales"</h1>
 
-###:mortar_board:Team Members
+### :mortar_board: Team Members
 | Name              | Academy Username      	|
 |-------------------|-------------------|
-|                   | :white_check_mark:|
-|Boncho Belutov |__composer2__ |		
+|                   | :white_check_mark: |
+| Boncho Belutov | __composer2__ |		
 
-##<a href="https://github.com/TelerikAcademy/Slice-and-Dice/tree/master/Course-Project">Project Requirements</a>  
+## <a href="https://github.com/TelerikAcademy/Slice-and-Dice/tree/master/Course-Project">Project Requirements</a>  
 
-##GitHub:<a href="https://github.com/composer2/Amazing-Sales">Amazing Sales</a>
+## GitHub:<a href="https://github.com/composer2/Amazing-Sales">Amazing Sales</a>
 
-##Presentation: <a href="not done">Amazing Sales Presentation</a>
+## Presentation: <a href="not done">Amazing Sales Presentation</a>
