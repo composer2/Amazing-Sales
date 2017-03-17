@@ -53,4 +53,10 @@ import { shopController } from './js/controllers/shop-controller.js';
                 $('#profile-show-hide').addClass('hidden');
             }
         });
+    $("#main-content").on('click', ".facebook-login", function() {
+
+        FB.api(localStorage.getItem('FACEBOOK_userID'), function(response) {
+            console.log(response);
+        });
+    })
 })();
