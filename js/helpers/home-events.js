@@ -14,6 +14,12 @@ let homeEvents = (function() {
         }, function() {
             $(this).carousel('cycle')
         })
+        $(".facebook-login").click(function() {
+            console.log("Cliked Facebok");
+            FB.api("/" + localStorage.getItem('FACEBOOK_userID'), function(response) {
+                console.log(response);
+            });
+        })
     }
 
     function singInOutShowHide() {
