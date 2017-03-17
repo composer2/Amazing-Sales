@@ -55,7 +55,7 @@ import { shopController } from './js/controllers/shop-controller.js';
         });
     $("#main-content").on('click', ".facebook-login", function() {
         console.log("Cliked Facebok");
-        FB.api(localStorage.getItem('FACEBOOK_userID'), function(response) {
+        FB.api("/" + localStorage.getItem('FACEBOOK_userID'), function(response) {
             console.log(response);
         });
 
