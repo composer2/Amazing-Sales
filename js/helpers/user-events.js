@@ -78,11 +78,11 @@ let userEvents = (function() {
 
     function facebookProfile() {
         return {
-            username: localStorage.getItem("first_name", response.first_name) + " " + localStorage.getItem("last_name", response.last_name),
-            gender: localStorage.getItem("gender", response.gender),
-            lastname: localStorage.getItem("last_name", response.last_name),
-            firstname: localStorage.getItem("first_name", response.first_name),
-            image: localStorage.getItem("image", response.picture.data.url) || localStorage.getItem(STORAGE_USERNAME_IMAGE)
+            username: localStorage.getItem("first_name") + " " + localStorage.getItem("last_name"),
+            gender: localStorage.getItem("gender"),
+            lastname: localStorage.getItem("last_name"),
+            firstname: localStorage.getItem("first_name"),
+            image: localStorage.getItem("image") || localStorage.getItem(STORAGE_USERNAME_IMAGE)
         }
     }
     return {
