@@ -321,6 +321,12 @@
     color: #2c2c2c;
 }
 
+#submit-new-comment,
+#submit-new-post {
+    margin-top: 300px;
+    margin-right: -10px;
+}
+
 @media screen and (max-width: 2560px) {
     #comments .nested {
         margin-left: 15%;
@@ -391,6 +397,10 @@
     }
     #comments .nested #nested-author {
         margin-top: 12px;
+    }
+    #submit-new-comment,
+    #submit-new-post {
+        margin-right: -7px;
     }
 }
 
@@ -495,6 +505,10 @@
         margin-left: 0px;
         margin-right: 0px;
     }
+    #submit-new-comment,
+    #submit-new-post {
+        margin-right: -17px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -535,6 +549,10 @@
         height: 38px;
         margin-right: -25px;
     }
+    #submit-new-comment,
+    #submit-new-post {
+        margin-right: -47px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -569,6 +587,10 @@
     }
     #read-less {
         margin-right: -20px;
+    }
+    #submit-new-comment,
+    #submit-new-post {
+        margin-right: -42px;
     }
 }
 

@@ -386,6 +386,10 @@ body {
     color: orangered;
 }
 
+#nav-collapse2 .form-inline {
+    background: white;
+}
+
 #nav-collapse2 .form-inline .form-group #Email {
     background-image: url("../images/input-bg.png");
     background-repeat: repeat-x;
@@ -886,9 +890,9 @@ body {
         font-size: 12px;
         font-weight: normal;
     }
-    .sign-in-out {
+    /*.sign-in-out {
         display: none;
-    }
+    }*/
     #mobile-sign-in {
         display: inline;
     }

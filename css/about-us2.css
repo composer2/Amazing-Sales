@@ -20,14 +20,40 @@
 
 /*media queries*/
 
+@media screen and (max-width: 1024px) {
+    .about-us {
+        width: 91.4%;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .about-us {
+        width: 93.6%;
+    }
     .about-us .about-us-h2 {
-        font-size: 1.5em;
+        font-size: 1.2em;
+        line-height: 20px;
     }
 }
 
 @media screen and (max-width: 425px) {
     .about-us .about-us-h2 {
-        font-size: 1.2em;
+        font-size: 1em;
+        line-height: 17px;
+    }
+    .about-us {
+        width: 92.6%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .about-us {
+        width: 91.6%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .about-us {
+        width: 90.3%;
     }
 }
