@@ -15,16 +15,17 @@ let homeEvents = (function() {
             $(this).carousel('cycle')
         })
         $(".facebook-login").click(function() {
-            FB.api("/{profile-id}", function(response) {
-                console.log("profile");
+            FB.api("/me?fields=id,first_name,last_name,gender,picture", function(response) {
+                console.log("me");
                 console.log(response);
             });
-            FB.api("/first_name", function(response) {
-                console.log("first");
+            FB.api('/me', { fields: 'last_name' }, function(response) {
                 console.log(response);
             });
-            FB.api("/last_name", function(response) {
-                console.log("last");
+            FB.api('/me', { fields: 'first_name' }, function(response) {
+                console.log(response);
+            });
+            FB.api('/me', { fields: 'gender' }, function(response) {
                 console.log(response);
             });
             FB.api("/" + localStorage.getItem('FACEBOOK_userID') + "/picture", function(response) {
