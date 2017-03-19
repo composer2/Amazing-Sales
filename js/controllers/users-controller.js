@@ -49,7 +49,7 @@ class UserController {
     }
 
     profile(context, selector) {
-        if (localStorage.getItem(STORAGE_AUTH_KEY === FACEBOOK_USER_LOGGED_IN)) {
+        if (localStorage.getItem(STORAGE_AUTH_KEY) === FACEBOOK_USER_LOGGED_IN) {
             let data = userEvents.facebookProfile()
             pageView.profilePage(selector, data);
             userEvents.editProfile();
