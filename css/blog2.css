@@ -92,6 +92,11 @@
     margin-right: 30px;
 }
 
+.post-content #user-single-post-image {
+    max-width: 290px;
+    max-height: 290px;
+}
+
 .post-content section ul {
     list-style-type: none;
 }

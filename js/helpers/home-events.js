@@ -45,7 +45,8 @@ let homeEvents = (function() {
     }
 
     function facebookLogin() {
-        $(".facebook-login").click(function() {
+        $("#main-content").on("click", ".facebook-login", function() {
+            console.log("API Call");
             FB.api("/me?fields=id,first_name,last_name,gender,picture", function(response) {
                 if (localStorage.getItem(FACEBOOK_accessToken)) {
                     notificator.success('Registered Successfully');
