@@ -15,24 +15,20 @@ let homeEvents = (function() {
             $(this).carousel('cycle')
         })
         $(".facebook-login").click(function() {
-            console.log("Cliked Facebok");
-            FB.api("/{user-id}", function(response) {
-                console.log(response);
-            });
-            console.log("ME");
             FB.api("/me", function(response) {
+                console.log("ME");
                 console.log(response);
             });
-            console.log("first");
-            FB.api("/{user-id}/first_name", function(response) {
+            FB.api("/" + localStorage.getItem('FACEBOOK_userID') + "/first_name", function(response) {
+                console.log("first");
                 console.log(response);
             });
-            console.log("last");
-            FB.api("/{user-id}last_name", function(response) {
+            FB.api("/" + localStorage.getItem('FACEBOOK_userID') + "/last_name", function(response) {
+                console.log("last");
                 console.log(response);
             });
-            console.log("pic");
-            FB.api("/{user-id}/picture ", function(response) {
+            FB.api("/" + localStorage.getItem('FACEBOOK_userID') + "/picture", function(response) {
+                console.log("pic");
                 console.log(response);
             });
 
