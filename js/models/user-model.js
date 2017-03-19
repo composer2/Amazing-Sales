@@ -81,10 +81,6 @@ class UserModel {
             let options = { headers };
             requester.post(url, options)
                 .then(function(res) {
-                    localStorage.removeItem(STORAGE_AUTH_KEY);
-                    localStorage.removeItem(STORAGE_USERNAME);
-                    localStorage.removeItem(STORAGE_USERNAME_ID);
-                    localStorage.removeItem(STORAGE_USERNAME_IMAGE);
                     resolve(res);
                 }, function(err) {
                     reject(err);
@@ -144,8 +140,6 @@ class UserModel {
                 });
         });
         return promise;
-        console.log("Updated");
-        console.log(data);
     }
 }
 

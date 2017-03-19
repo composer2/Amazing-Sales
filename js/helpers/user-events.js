@@ -3,6 +3,7 @@ import { userModel } from '../models/user-model.js';
 import { notificator } from '../helpers/notificator.js';
 
 const STORAGE_USERNAME_IMAGE = 'STORAGE_USERNAME_IMAGE';
+const FACEBOOK_USER = 'FACEBOOK_USER';
 
 let userEvents = (function() {
 
@@ -71,7 +72,17 @@ let userEvents = (function() {
             email: res.email,
             lastname: res.lastname,
             firstname: res.firstname,
-            image: res.imgae || localStorage.getItem(STORAGE_USERNAME_IMAGE)
+            image: res.image || localStorage.getItem(STORAGE_USERNAME_IMAGE)
+        }
+    }
+
+    function facebookProfile() {
+        return {
+            username: localStorage.getItem("first_name", response.first_name) + " " + localStorage.getItem("last_name", response.last_name),
+            gender: localStorage.getItem("gender", response.gender),
+            lastname: localStorage.getItem("last_name", response.last_name),
+            firstname: localStorage.getItem("first_name", response.first_name),
+            image: localStorage.getItem("image", response.picture.data.url) || localStorage.getItem(STORAGE_USERNAME_IMAGE)
         }
     }
     return {
@@ -80,7 +91,8 @@ let userEvents = (function() {
         editProfile,
         updateProfile,
         updateDataProfile,
-        cancelEditProfile
+        cancelEditProfile,
+        facebookProfile
     }
 })();
 

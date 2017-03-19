@@ -21,6 +21,7 @@ class HomeController {
             }).then(() => {
                 homeEvents.startCarousel();
                 homeEvents.singInOutShowHide();
+                homeEvents.facebookLogin();
             });
     }
     aboutUs(context, selector) {

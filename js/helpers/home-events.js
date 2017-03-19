@@ -1,4 +1,8 @@
 import { usersController } from '../controllers/users-controller.js'
+import { notificator } from '../helpers/notificator'
+
+const STORAGE_AUTH_KEY = 'STORAGE_AUTHENTICATION_KEY';
+const FACEBOOK_accessToken = 'FACEBOOK_accessToken';
 
 let homeEvents = (function() {
     function startCarousel() {
@@ -13,26 +17,6 @@ let homeEvents = (function() {
             $(this).carousel('pause')
         }, function() {
             $(this).carousel('cycle')
-        })
-        $(".facebook-login").click(function() {
-            FB.api("/me?fields=id,first_name,last_name,gender,picture", function(response) {
-                console.log("me");
-                console.log(response);
-            });
-            FB.api('/me', { fields: 'last_name' }, function(response) {
-                console.log(response);
-            });
-            FB.api('/me', { fields: 'first_name' }, function(response) {
-                console.log(response);
-            });
-            FB.api('/me', { fields: 'gender' }, function(response) {
-                console.log(response);
-            });
-            FB.api("/" + localStorage.getItem('FACEBOOK_userID') + "/picture", function(response) {
-                console.log("pic");
-                console.log(response);
-            });
-
         })
     }
 
@@ -60,9 +44,25 @@ let homeEvents = (function() {
         });
     }
 
+    function facebookLogin() {
+        $(".facebook-login").click(function() {
+            FB.api("/me?fields=id,first_name,last_name,gender,picture", function(response) {
+                if (localStorage.getItem(FACEBOOK_accessToken)) {
+                    notificator.success('Registered Successfully');
+                    localStorage.setItem("first_name", response.first_name)
+                    localStorage.setItem("last_name", response.last_name)
+                    localStorage.setItem("gender", response.gender)
+                    localStorage.setItem("image", response.picture.data.url)
+                    localStorage.setItem(STORAGE_AUTH_KEY, "FACEBOOK_USER_LOGGED_IN");
+                }
+            });
+        })
+    }
+
     return {
         startCarousel,
-        singInOutShowHide
+        singInOutShowHide,
+        facebookLogin
     }
 
 })();
