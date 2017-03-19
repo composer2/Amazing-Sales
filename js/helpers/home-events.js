@@ -16,7 +16,7 @@ let homeEvents = (function() {
         })
         $(".facebook-login").click(function() {
             console.log("Cliked Facebok");
-            FB.api("/" + localStorage.getItem('FACEBOOK_userID'), function(response) {
+            FB.api("/{user-id}", function(response) {
                 console.log(response);
             });
         })
