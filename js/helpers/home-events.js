@@ -19,6 +19,23 @@ let homeEvents = (function() {
             FB.api("/{user-id}", function(response) {
                 console.log(response);
             });
+            console.log("ME");
+            FB.api("/me", function(response) {
+                console.log(response);
+            });
+            console.log("first");
+            FB.api("/{user-id}/first_name", function(response) {
+                console.log(response);
+            });
+            console.log("last");
+            FB.api("/{user-id}last_name", function(response) {
+                console.log(response);
+            });
+            console.log("pic");
+            FB.api("/{user-id}/picture ", function(response) {
+                console.log(response);
+            });
+
         })
     }
 
