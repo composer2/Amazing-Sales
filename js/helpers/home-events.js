@@ -1,5 +1,5 @@
 import { usersController } from '../controllers/users-controller.js'
-import { notificator } from '../helpers/notificator'
+import { notificator } from '../helpers/notificator.js'
 
 const STORAGE_AUTH_KEY = 'STORAGE_AUTHENTICATION_KEY';
 const FACEBOOK_accessToken = 'FACEBOOK_accessToken';
