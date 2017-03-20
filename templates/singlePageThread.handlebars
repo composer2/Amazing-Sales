@@ -1,0 +1,45 @@
+ {{#threads}}
+<div>
+    <h2 class="pull-left kreonLight">{{topicName}}</h2>
+    <h3 class="ask-question pull-right kreonLight">
+        <button class="btn btn-default button-color button-new-post">
+                        <span class="glyphicon glyphicon-plus"></span> New Post
+                    </button>
+    </h3>
+    <div class="clearfix"></div>
+    <div id="comment-reply" class="new-post-form hidden">
+        <div class="row">
+            <h1>Create New Post</h1>
+            <form id="comment-form-reset" class="col-sm-12">
+                <input type="text" id="name" name="Post Heading" placeholder="Post Heading" class="new-post-heading" required>
+                <input type="text" id="email" name="Tags" placeholder="Tags (space separated)" class="new-post-tags" required>
+                <textarea rows="3" id="description" name="Post description" placeholder="Post description" required class="new-post-description"></textarea>
+                <a id="submit-new-post" type="submit" class="btn btn-default pull-right submit-new-post">Submit</a>
+            </form>
+        </div>
+    </div>
+    <br>
+</div>
+<hr>
+<ul class="blog-posts">
+    {{#each threads}}
+    <li class="new-post-content">
+        <h3 class="kreonLight">
+            <a href="#/blog/threads/{{threadName}}">{{threadName}}</a>
+        </h3>
+        <div class="blog-post-details kreonLight">
+            <img src="{{authorImage}}" alt="jon-doe" width="52" height="52"> <span class="blog-post-author">Posted by <a href="" class="posted-by">{{postedBy}}</a>
+                            <date> {{threadDate}} </date> | {{comments.length}} Comments</span>
+        </div>
+        <article class="blog-post-summary droidSansRegular">
+            {{threadDescription}}
+        </article>
+        <div class="blog-post-tags droidSansRegular">
+            {{#each tag}}
+            <span class="label label-default">{{this}}</span> {{/each}}
+        </div>
+        <hr>
+    </li>
+    {{/each}}
+</ul>
+{{/threads}}

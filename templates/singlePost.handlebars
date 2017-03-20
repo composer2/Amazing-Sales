@@ -1,12 +1,12 @@
 {{#thread}}
-<div class="container blog-page">
+<div class="container blog-page kreonLight">
     <ol class="breadcrumb">
         <li><a href="#/home">Home</a></li>
         <li><a href="#/blog">Blog</a></li>
     </ol>
     <div class="row">
-        <div id="category-title">
-            <h1 class="text-center"><strong>{{topicName}}</strong></h1>
+        <div id="category-title" class="kreonLight">
+            <h1 class="text-center">{{topicName}}</h1>
             <h3 class="text-center">{{topicShortDescription}}</h3>
         </div>
     </div>
@@ -15,15 +15,15 @@
         <section class="col-lg-8  col-md-8 col-sm-12 col-xs-12">
             {{#singlePost}}
             <div class="post">
-                <h1>{{threadName}}</h1>
+                <h1 class="kreonLight">{{threadName}}</h1>
                 <hr>
-                <h5>Posted by <a href="" class="posted-by">{{postedBy}}</a>
+                <h5 class="kreonLight">Posted by <a href="" class="posted-by">{{postedBy}}</a>
                     <date> {{threadDate}} in </date>
                     <a href="" class="posted-by"></a> | {{comments.length}} Comments</h5>
                 <hr>
                 <img id="user-single-post-image" src="{{authorImage}}" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
                 <article id="post-article">
-                    <h5>
+                    <h5 class="droidSansRegular">
                         {{threadDescription}}
                     </h5>
                 </article>
@@ -32,17 +32,17 @@
             <div id="article-comments" class="hidden">
                 <div id="comments">
                     <br>
-                    <h1>{{comments.length}} Comments</h1>
+                    <h1 class="kreonLight">{{comments.length}} Comments</h1>
                     {{#each comments}}
                     <div id="comment-{{@index}}" class="media append-reply-form">
                         <div class="media-left">
                             <img src="{{authorImage}}" alt="{{postedBy}}" class="pull-left">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading text-left">{{postedBy}}</h3>
-                            <p id="nested-author1" class="text-right"><small><i>Posted on {{commentDate}}</i></small></p>
-                            <p class="nested-p-mobile">{{comment}}</p>
-                            <a id="{{@index}}" class="comment-question" class="btn btn-default btn-blog pull-right">Reply</a>
+                            <h3 class="media-heading text-left kreonLight">{{postedBy}}</h3>
+                            <p id="nested-author1" class="text-right"><small class="georgiaItalic"><i>Posted on {{commentDate}}</i></small></p>
+                            <p class="nested-p-mobile droidSansRegular">{{comment}}</p>
+                            <a id="{{@index}}" class="comment-question btn btn-default btn-blog pull-right kreonLight">Reply</a>
                         </div>
                     </div>
                     {{#each reply}}
@@ -51,9 +51,9 @@
                             <img src="{{authorImage}}" alt="{{postedBy}}" class="pull-left">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">{{postedBy}}</h3>
-                            <p id="nested-author2" class="text-right"><small><i>Posted on {{commentDate}}</i></small></p>
-                            <p class="nested-p nested-p-mobile">{{comment}}</p>
+                            <h3 class="media-heading kreonLight">{{postedBy}}</h3>
+                            <p id="nested-author2" class="text-right"><small class="georgiaItalic"><i>Posted on {{commentDate}}</i></small></p>
+                            <p class="nested-p nested-p-mobile droidSansRegular">{{comment}}</p>
                             {{!--<a class="comment-answer" href="" class="btn btn-default btn-blog pull-right">Reply</a>--}}
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                 </div>
                 <div id="comment-reply">
                     <div class="row">
-                        <h1>Leave a Reply</h1>
+                        <h1 class="kreonLight">Leave a Reply</h1>
                         <form id="comment-form-reset" class="col-sm-12">
                                 <input type="text" id="name" name="name" class="input-block-level" placeholder="Name" required>
                                 <input type="text" id="email" name="email" class="input-block-level" placeholder="Email" required>
@@ -77,8 +77,8 @@
         <aside class="col-lg-4  col-md-4 col-sm-12 col-xs-12">
             <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
                 <ul>
-                    <h3 class="text-left">From The Blog</h3>
-                    <div>
+                    <h3 class="text-left kreonLight">From The Blog</h3>
+                    <div class="droidSansRegular">
                         <li class="text-left"><a href="#/blog/Snowboard tricks"><span>Snowboard tricks</span></a></li>
                         <li class="text-left"><a href="#/blog/How to hip jumps"><span>How to hip jumps</span></a></li>
                         <li class="text-left"><a href="#/blog/Advance skills"><span>Advance skills</span></a></li>
@@ -90,8 +90,8 @@
             </div>
             <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
                 <ul>
-                    <h3 class="text-left">Archives</h3>
-                    <div>
+                    <h3 class="text-left kreonLight">Archives</h3>
+                    <div class="droidSansRegular">
                         <li class="text-left"><a href="#/blog/Avalanche makers"><span>Avalanche makers</span></a></li>
                         <li class="text-left"><a href="#/blog/Left alone"><span>Left alone</span></a></li>
                         <li class="text-left"><a href="#/blog/Starter pack"><span>Starter pack</span></a></li>
@@ -102,8 +102,8 @@
             </div>
             <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
                 <ul>
-                    <h3 class="text-left">Recent Post</h3>
-                    <div>
+                    <h3 class="text-left kreonLight">Recent Post</h3>
+                    <div class="droidSansRegular">
                         <li class="text-left"><a href="#/blog/Blog rules"><span>Blog rules</span></a></li>
                         <li class="text-left"><a href="#/blog/How to hip jumps"><span>How to hip jumps</span></a></li>
                         <li class="text-left"><a href="#/blog/Starter pack"><span>Starter pack</span></a></li>
@@ -113,13 +113,11 @@
                 </ul>
             </div>
         </aside>
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-offset-7 col-md-offset-7 col-sm-offset-6 col-xs-offset-5">
-            <ul class="page-pagination">
+        {{!--<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-offset-7 col-md-offset-7 col-sm-offset-6 col-xs-offset-5">
+            <ul class="page-pagination kreonLight">
                 <br>
-                <li class="selected"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
+                <li class="selected"><a>1</a></li> 
             </ul>
-        </div>
+        </div>--}}
     </div>
 </div>

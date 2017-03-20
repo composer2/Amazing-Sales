@@ -1,0 +1,17 @@
+<h2 class="kreonRegular">
+    All Topic</h2>
+<hr>
+<ul class="blog-posts">
+    {{#each topics}}
+    <li>
+        <h3 class="kreonLight">
+            <a href="#/blog/{{topicName}}">{{topicName}}</a>
+        </h3>
+        <div class="blog-post-details kreonLight">
+            <img src="{{authorImage}}" alt="{{postedBy}}" width="52" height="52"> <span class="blog-post-author">Posted by <a href="" class="posted-by">{{postedBy}}</a>
+                            <date> on {{topicDate}} </date> | {{threads.length}} Threads</span>
+        </div>
+        <hr>
+    </li>
+    {{/each}}
+</ul>

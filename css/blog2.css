@@ -45,6 +45,10 @@
     min-height: 730px;
 }
 
+.post-content .post h1 {
+    font-size: 22px;
+}
+
 .post-content .posted-by {
     color: #929292;
     text-decoration: none;
@@ -330,6 +334,23 @@
 #submit-new-post {
     margin-top: 300px;
     margin-right: -10px;
+}
+
+.droidSansRegular {
+    font-family: 'Droid Sans', serif;
+}
+
+.georgiaItalic {
+    font-family: 'Georgia', serif;
+}
+
+.kreonLight {
+    font-family: 'Kreon', serif;
+    font-weight: 300;
+}
+
+.kreonRegular {
+    font-family: 'Kreon', serif;
 }
 
 @media screen and (max-width: 2560px) {

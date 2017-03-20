@@ -1,14 +1,14 @@
 <div class="container blog-page">
-    <ol class="breadcrumb">
+    <ol class="breadcrumb kreonLight">
         <li><a href="#/home">Home</a></li>
         <li><a href="#/blog">Blog</a></li>
     </ol>
     <div class="row post-content"> 
-        <section class="col-lg-8  col-md-8 col-sm-12 col-xs-12">
+        <section id="singlePageThread" class="col-lg-8  col-md-8 col-sm-12 col-xs-12">
             {{#threads}}
             <div>
-                <h2 class="pull-left">{{topicName}}</h2>
-                <h3 class="ask-question pull-right">
+                <h2 class="pull-left kreonLight">{{topicName}}</h2>
+                <h3 class="ask-question pull-right kreonLight">
                     <button class="btn btn-default button-color button-new-post">
                         <span class="glyphicon glyphicon-plus"></span> New Post
                     </button>
@@ -31,17 +31,17 @@
             <ul class="blog-posts">
                 {{#each threads}}
                 <li class="new-post-content">
-                    <h3>
+                    <h3 class="kreonLight">
                         <a href="#/blog/threads/{{threadName}}">{{threadName}}</a>
                     </h3>
-                    <div class="blog-post-details">
+                    <div class="blog-post-details kreonLight">
                         <img src="{{authorImage}}" alt="jon-doe" width="52" height="52"> <span class="blog-post-author">Posted by <a href="" class="posted-by">{{postedBy}}</a>
                             <date> {{threadDate}} </date> | {{comments.length}} Comments</span>
                     </div>
-                    <article class="blog-post-summary">
+                    <article class="blog-post-summary droidSansRegular">
                         {{threadDescription}}
                     </article>
-                    <div class="blog-post-tags">
+                    <div class="blog-post-tags droidSansRegular">
                         {{#each tag}}
                         <span class="label label-default">{{this}}</span> {{/each}}
                     </div>
@@ -54,8 +54,8 @@
         <aside class="col-lg-4  col-md-4 col-sm-12 col-xs-12">
             <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
                 <ul>
-                    <h3 class="text-left">From The Blog</h3>
-                    <div>
+                    <h3 class="text-left kreonLight">From The Blog</h3>
+                    <div class="droidSansRegular">
                         <li class="text-left"><a href="#/blog/Snowboard tricks"><span>Snowboard tricks</span></a></li>
                         <li class="text-left"><a href="#/blog/How to hip jumps"><span>How to hip jumps</span></a></li>
                         <li class="text-left"><a href="#/blog/Advance skills"><span>Advance skills</span></a></li>
@@ -67,8 +67,8 @@
             </div>
             <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
                 <ul>
-                    <h3 class="text-left">Archives</h3>
-                    <div>
+                    <h3 class="text-left kreonLight">Archives</h3>
+                    <div class="droidSansRegular">
                         <li class="text-left"><a href="#/blog/Avalanche makers"><span>Avalanche makers</span></a></li>
                         <li class="text-left"><a href="#/blog/Left alone"><span>Left alone</span></a></li>
                         <li class="text-left"><a href="#/blog/Starter pack"><span>Starter pack</span></a></li>
@@ -79,8 +79,8 @@
             </div>
             <div class="col-lg-12  col-md-12 col-sm-4 col-xs-12">
                 <ul>
-                    <h3 class="text-left">Recent Post</h3>
-                    <div>
+                    <h3 class="text-left kreonLight">Recent Post</h3>
+                    <div class="droidSansRegular">
                         <li class="text-left"><a href="#/blog/Blog rules"><span>Blog rules</span></a></li>
                         <li class="text-left"><a href="#/blog/How to hip jumps"><span>How to hip jumps</span></a></li>
                         <li class="text-left"><a href="#/blog/Starter pack"><span>Starter pack</span></a></li>
@@ -91,10 +91,8 @@
             </div>
         </aside>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-offset-7 col-md-offset-7 col-sm-offset-6 col-xs-offset-5">
-            <ul class="page-pagination">
-                <li class="selected"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
+            <ul class="page-pagination threads-pagination kreonLight">
+                <li class="selected"><a>1</a></li>
             </ul>
         </div>
     </div>

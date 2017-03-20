@@ -405,8 +405,22 @@ body {
     display: none;
 }
 
+.droidSansRegular {
+    font-family: 'Droid Sans', serif;
+}
 
-/*navbar sign in*/
+.georgiaItalic {
+    font-family: 'Georgia', serif;
+}
+
+.kreonLight {
+    font-family: 'Kreon', serif;
+    font-weight: 300;
+}
+
+.kreonRegular {
+    font-family: 'Kreon', serif;
+}
 
 
 /*Footer*/
@@ -748,6 +762,7 @@ body {
         background-color: dodgerblue;
     }
     #nav-menu li {
+        font-family: 'Droid Sans', serif;
         text-align: center;
         color: #393939;
         font-size: 15px;

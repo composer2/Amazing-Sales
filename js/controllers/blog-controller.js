@@ -3,18 +3,51 @@ import { blogModel } from '../models/blog-model.js';
 import { notificator } from '../helpers/notificator.js';
 import { blogEvents } from '../helpers/blog-events.js';
 
+const POST_BY_PAGE = 5;
+
 class BlogController {
     constructor() {
         this.singleThread_id = "";
     }
     blog(context, selector) {
+        let pages;
         blogModel.getAllForumInfo()
+            .then((res) => {
+                pages = res.length;
+                let firstFive = res.slice(0, POST_BY_PAGE);
+                let data = {
+                    topics: firstFive
+                };
+                return pageView.blog(selector, data);
+
+            }, (err) => {
+                console.log(err);
+            }).then(() => {
+                blogEvents.attachNumberOfPages(pages);
+                blogEvents.loadPostsByPageNumber();
+            });
+    }
+    loadPostDataByPageNumber(limit, skip) {
+        blogModel.getAllForumInfoOnPageX(limit, skip)
             .then((res) => {
                 let data = {
                     topics: res
                 };
-                pageView.blog(selector, data);
-
+                return pageView.singlePagePost("#singlePagePost", data);
+            }, (err) => {
+                console.log(err);
+            });
+    }
+    loadThreadDataByPageNumber(start) {
+        let topicName = window.location.href.split("/");
+        blogModel.getAllThreadsOnPageX(topicName[topicName.length - 1])
+            .then((res) => {
+                let newData = res[0].threads.slice(start, start + POST_BY_PAGE)
+                let data = {
+                    threads: res[0]
+                };
+                data.threads.threads = newData;
+                return pageView.singlePageThread("#singlePageThread", data);
             }, (err) => {
                 console.log(err);
             });
@@ -22,11 +55,15 @@ class BlogController {
 
     threads(context, selector) {
         let data;
+        let pages;
         blogModel.getAllThreads(context.params.threads)
             .then((res) => {
+                pages = res[0].threads.length;
+                let firstFive = res[0].threads.slice(0, POST_BY_PAGE);
                 data = {
                     threads: res[0]
                 };
+                data.threads.threads = firstFive;
                 return pageView.threads(selector, data);
             }, (err) => {
                 console.log(err);
@@ -34,6 +71,8 @@ class BlogController {
                 blogEvents.attachThreadsLinks(context.params.threads);
                 blogEvents.showNewPost();
                 blogEvents.submitNewPost(data, selector);
+                blogEvents.attachNumberOfPages(pages);
+                blogEvents.loadThreadsByPageNumber();
             });
     }
 

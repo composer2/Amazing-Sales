@@ -1,13 +1,47 @@
 import { pageView } from '../view/page-viewer.js';
 import { blogModel } from '../models/blog-model.js';
 import { notificator } from '../helpers/notificator.js';
+import { blogController } from '../controllers/blog-controller.js';
 
 const STORAGE_USERNAME = 'STORAGE_USERNAME';
 const POSTED_BY = localStorage.getItem(STORAGE_USERNAME) || "Guest"
 const STORAGE_USERNAME_IMAGE = 'STORAGE_USERNAME_IMAGE';
 const USER_IMAGE = localStorage.getItem(STORAGE_USERNAME_IMAGE) || "https://cdn.pbrd.co/images/I7tGDp00I.png";;
+const POST_BY_PAGE = 5;
+
 
 let blogEvents = (function() {
+    function attachNumberOfPages(pages) {
+        for (var index = 1; index < pages / POST_BY_PAGE; index++) {
+            $(".page-pagination").append(`
+                        <li><a>` + (index + 1) + `</a></li> 
+                `)
+        }
+    }
+
+    function loadPostsByPageNumber() {
+        $(".post-pagination").on('click', 'li', function() {
+            let currentLi = $(this);
+            $(".page-pagination").children().removeClass("selected")
+            currentLi.addClass("selected");
+
+            let pageNumber = currentLi.children().html();
+            let skip = (pageNumber - 1) * POST_BY_PAGE;
+            blogController.loadPostDataByPageNumber(POST_BY_PAGE, skip);
+        })
+    }
+
+    function loadThreadsByPageNumber() {
+        $(".threads-pagination").on('click', 'li', function() {
+            let currentLi = $(this);
+            $(".page-pagination").children().removeClass("selected")
+            currentLi.addClass("selected");
+
+            let pageNumber = currentLi.children().html();
+            let skip = (pageNumber - 1) * POST_BY_PAGE;
+            blogController.loadThreadDataByPageNumber(skip);
+        })
+    }
 
     function attachThreadsLinks(thread) {
         $(".breadcrumb").append(`
@@ -187,7 +221,10 @@ let blogEvents = (function() {
         showComments,
         submitNewPost,
         createNewComment,
-        createNewReply
+        createNewReply,
+        attachNumberOfPages,
+        loadPostsByPageNumber,
+        loadThreadsByPageNumber
     }
 })();
 export { blogEvents }

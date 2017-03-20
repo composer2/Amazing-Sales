@@ -23,10 +23,41 @@ class BlogModel {
         });
         return promise;
     }
+    getAllForumInfoOnPageX(limit, skip) {
+        let promise = new Promise((resolve, reject) => {
+            let url = kinvey_URL + 'appdata/' + kinvey_APP_ID + '/forum/?query={}&limit=' + limit + '&skip=' + skip;
+            let authBase64 = btoa(kinvey_APP_ID + ":" + kinvey_MASTER_SECRET);
+            let headers = { Authorization: "Basic " + authBase64 }
+            let options = { headers };
+            requester.get(url, options)
+                .then((res) => {
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+        });
+        return promise;
+    }
 
     getAllThreads(fromTopicByName) {
         let promise = new Promise((resolve, reject) => {
             let url = kinvey_URL + 'appdata/' + kinvey_APP_ID + '/forum/?query={"topicName":"' + fromTopicByName + '"}';
+            let authBase64 = btoa(kinvey_APP_ID + ":" + kinvey_MASTER_SECRET);
+            let headers = { Authorization: "Basic " + authBase64 }
+            let options = { headers };
+            requester.get(url, options)
+                .then((res) => {
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+        });
+        return promise;
+    }
+    getAllThreadsOnPageX(fromTopicByName) {
+        let promise = new Promise((resolve, reject) => {
+            let url = kinvey_URL + 'appdata/' + kinvey_APP_ID + '/forum/?query={"topicName":"' + fromTopicByName + '"}';
+            console.log(url);
             let authBase64 = btoa(kinvey_APP_ID + ":" + kinvey_MASTER_SECRET);
             let headers = { Authorization: "Basic " + authBase64 }
             let options = { headers };

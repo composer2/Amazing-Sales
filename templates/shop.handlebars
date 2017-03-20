@@ -4,7 +4,7 @@
         <div class="container">
             <div class="score"><a><span>#{{inc @index}}</span></a></div>
             <h3 class="badge">
-                <span class="ec">
+                <span class="ec kreonRegular">
             <i class="fa fa-check" aria-hidden="true" style="background: rgb(50, 146, 208); color:#8EC47F; "></i>{{name}}</span>
             </h3>
             <div class="inner">
@@ -24,8 +24,8 @@
                             <div class="controllers">
                                 <div class="l " data-fav="unfave" data-id="36770" data-user="0" data-anon="1486743847" data-items="18" data-sortorder="17"><label class="icon-heart-broken"><i class="fa fa-thumbs-down" aria-hidden="true" style="background: white; color: black;"   ></i></label></div>
                                 <div class="m">
-                                    <small>Score</small>
-                                    <strong>{{score}}</strong>
+                                    <small class="georgiaItalic">Score</small>
+                                    <strong class="kreonLight">{{score}}</strong>
                                 </div>
                                 <div class="r " data-fav="fave" data-id="36770" data-user="0" data-anon="1486743847" data-items="18" data-sortorder="17"><label class="icon-heart"><i class="fa fa-thumbs-up" aria-hidden="true" style="background: white; color: black;"></i></label></div>
                             </div>
@@ -34,7 +34,7 @@
                     <!-- .col- -->
                     <div class="col-lg-7 col-xl-8">
                         <h2 class="product-title hidden-md-down">
-                            <a href="{{linkToAmazon}}" class="see" data-fave="36770" target="_blank" onclick="ga('send', 'event', 'Article > List', 'Item > Title > Click', 'Nautica Voyage By Nautica For Men Eau De Toilette Spray');">{{fullName}}</a>
+                            <a href="{{linkToAmazon}}" class="see kreonRegular" data-fave="36770" target="_blank" >{{fullName}}</a>
                         </h2>
                         <div class="sec">
                             <div class="row">
@@ -42,25 +42,25 @@
                                     <div class="price-card">
                                         <div class="r">
                                             <div class="price">
-                                                <strong>${{price}}</strong>
+                                                <strong class="georgiaItalic">${{price}}</strong>
                                                 <span class="sale">&nbsp;&nbsp;</span>
                                             </div>
                                         </div>
                                         <div class="r">
-                                            <a href="{{linkToAmazon}}" class="see btn btn-info btn-block" target="_blank" data-fave="36770" onclick="ga('send', 'event', 'Article > List', 'Item > Buy Button > Click', 'Nautica Voyage By Nautica For Men Eau De Toilette Spray');"><i class="icon-right"></i>${{price}}&nbsp;at&nbsp;amazon.com</a>
+                                            <a href="{{linkToAmazon}}" class="see btn btn-info btn-block droidSansRegular" target="_blank" data-fave="36770" ><i class="icon-right"></i>${{price}}&nbsp;at&nbsp;amazon.com</a>
                                         </div>
                                         <div class="r">
                                             <span class="states">
-                            <i class="fa fa-tags" aria-hidden="true" style="background: white; color: #8EC47F;"></i> {{purchased}} Purchased • <a href="{{linkToAmazon}}">amazon.com</a>
+                            <i class="fa fa-tags" aria-hidden="true" style="background: white; color: #8EC47F;"></i> {{purchased}} Purchased • <a href="{{linkToAmazon}}" class="kreonRegular">amazon.com</a>
                           </span>
                                         </div>
                                     </div>
                                     <!-- price-card -->
                                 </div>
                                 <div class="col-lg-6 col-lg-pull-6 col-sm-12">
-                                    <h4 id="heart-heading-h4"><i class="fa fa-heart" aria-hidden="true" style="background: white; color: #8EC47F"></i>Why
+                                    <h4 id="heart-heading-h4" class="georgiaItalic"><i class="fa fa-heart" aria-hidden="true" style="background: white; color: #8EC47F"></i>Why
                                         People Love it</h4>
-                                    <ul id="check-icons">
+                                    <ul id="check-icons" class="droidSansRegular">
                                         {{#each threeWords}}
                                         <li><i class="fa fa-check" aria-hidden="true" style="background: white; color: #8EC47F;padding-right:10px; margin-left:-25px;"></i>{{this}}</li>
                                         {{/each}}
@@ -72,18 +72,18 @@
                         <div class="sec">
                             <div class="line-title">
                                 <div class="title">
-                                    <label class="pros active">Pros</label>
-                                    <label class="cons ">Cons</label>
+                                    <label class="pros active georgiaItalic">Pros</label>
+                                    <label class="cons georgiaItalic">Cons</label>
                                 </div>
                             </div>
                             <!-- .line-title -->
                             <div class="product-tabs">
                                 <div class="product-tab tab-pros active">
-                                    <p>{{pros}}</p>
+                                    <p class="georgiaItalic">{{pros}}</p>
                                 </div>
                                 <!-- .product-tab -->
                                 <div class="product-tab tab-cons">
-                                    <p>{{cons}}</p>
+                                    <p class="georgiaItalic">{{cons}}</p>
                                 </div>
                                 <!-- .product-tab -->
                             </div>
@@ -93,11 +93,11 @@
                         <div class="sec">
                             <div class="line-title">
                                 <div class="title">
-                                    <span>Details</span>
+                                    <span class="georgiaItalic">Details</span>
                                 </div>
                             </div>
                             <!-- .line-title -->
-                            <div class="product-description">
+                            <div class="product-description georgiaItalic">
                                 {{#each details}}
                                 <p><strong>{{@key}}: </strong> {{this}}</p>
                                 {{/each}}

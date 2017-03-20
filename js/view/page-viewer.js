@@ -25,6 +25,12 @@ class PageView {
     blog(selector, topics) {
         return setHtmlWithCompiledData(selector, topics, 'blog');
     }
+    singlePagePost(selector, postsByPage) {
+        return setHtmlWithCompiledData(selector, postsByPage, 'singlePagePost');
+    }
+    singlePageThread(selector, threadsByPage) {
+        return setHtmlWithCompiledData(selector, threadsByPage, 'singlePageThread');
+    }
 
     cart(selector) {
         return loadRawTemplate(selector, 'cart');
