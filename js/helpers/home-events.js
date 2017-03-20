@@ -1,9 +1,6 @@
 import { usersController } from '../controllers/users-controller.js'
 import { notificator } from '../helpers/notificator.js'
 
-const STORAGE_AUTH_KEY = 'STORAGE_AUTHENTICATION_KEY';
-const FACEBOOK_accessToken = 'FACEBOOK_accessToken';
-
 let homeEvents = (function() {
     function startCarousel() {
         // Activate Carousel
@@ -44,26 +41,20 @@ let homeEvents = (function() {
         });
     }
 
-    function facebookLogin() {
-        $("#main-content").on("click", ".facebook-login", function() {
-            console.log("API Call");
-            FB.api("/me?fields=id,first_name,last_name,gender,picture", function(response) {
-                if (localStorage.getItem(FACEBOOK_accessToken)) {
-                    notificator.success('Registered Successfully');
-                    localStorage.setItem("first_name", response.first_name)
-                    localStorage.setItem("last_name", response.last_name)
-                    localStorage.setItem("gender", response.gender)
-                    localStorage.setItem("image", response.picture.data.url)
-                    localStorage.setItem(STORAGE_AUTH_KEY, "FACEBOOK_USER_LOGGED_IN");
-                }
-            });
+    function facebookShare() {
+        $("#facebook-login").click(function() {
+            FB.ui({
+                method: 'share',
+                display: 'popup',
+                href: 'https://rawgit.com/composer2/Amazing-Sales/master/index.html',
+            }, function(response) {});
         })
     }
 
     return {
         startCarousel,
         singInOutShowHide,
-        facebookLogin
+        facebookShare
     }
 
 })();

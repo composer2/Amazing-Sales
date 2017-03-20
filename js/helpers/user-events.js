@@ -2,9 +2,6 @@ import { pageView } from '../view/page-viewer.js';
 import { userModel } from '../models/user-model.js';
 import { notificator } from '../helpers/notificator.js';
 
-const STORAGE_USERNAME_IMAGE = 'STORAGE_USERNAME_IMAGE';
-const FACEBOOK_USER = 'FACEBOOK_USER';
-
 let userEvents = (function() {
 
     function showProfile() {
@@ -76,15 +73,6 @@ let userEvents = (function() {
         }
     }
 
-    function facebookProfile() {
-        return {
-            username: localStorage.getItem("first_name") + " " + localStorage.getItem("last_name"),
-            gender: localStorage.getItem("gender"),
-            lastname: localStorage.getItem("last_name"),
-            firstname: localStorage.getItem("first_name"),
-            image: localStorage.getItem("image") || localStorage.getItem(STORAGE_USERNAME_IMAGE)
-        }
-    }
     return {
         showProfile,
         hideProfile,
@@ -92,7 +80,6 @@ let userEvents = (function() {
         updateProfile,
         updateDataProfile,
         cancelEditProfile,
-        facebookProfile
     }
 })();
 

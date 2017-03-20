@@ -90,23 +90,6 @@ class UserModel {
         return promise;
     }
 
-    getAllUsernames() {
-        let promise = new Promise((resolve, reject) => {
-            let url = 'api/users';
-            requester.get(url)
-                .then((res) => {
-                    let users = {};
-                    res.forEach((user) => {
-                        users[user._id] = user.nickname;
-                    });
-
-                    localStorage.setItem(STORAGE_USERNAMES_AND_ID, JSON.stringify(users));
-                });
-        });
-
-        return promise;
-    }
-
     getCurrentUserInfo() {
         let promise = new Promise((resolve, reject) => {
             let url = kinvey_URL + 'user/' + kinvey_APP_ID + '/' + localStorage.getItem(STORAGE_USERNAME_ID);

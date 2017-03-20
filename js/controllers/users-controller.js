@@ -3,9 +3,6 @@ import { userModel } from '../models/user-model.js';
 import { notificator } from '../helpers/notificator.js';
 import { userEvents } from '../helpers/user-events.js';
 
-const STORAGE_AUTH_KEY = 'STORAGE_AUTHENTICATION_KEY';
-const FACEBOOK_USER_LOGGED_IN = 'FACEBOOK_USER_LOGGED_IN';
-
 class UserController {
     signInUp() {
         let user = {
@@ -49,25 +46,17 @@ class UserController {
     }
 
     profile(context, selector) {
-        if (localStorage.getItem(STORAGE_AUTH_KEY) === FACEBOOK_USER_LOGGED_IN) {
-            let data = userEvents.facebookProfile()
-            pageView.profilePage(selector, data);
-            userEvents.editProfile();
-            // userEvents.updateProfile();
-            userEvents.cancelEditProfile();
-        } else {
-            userModel.getCurrentUserInfo()
-                .then((res) => {
-                    let data = userEvents.updateDataProfile(res);
-                    return pageView.profilePage(selector, data);
-                }, (err) => {
-                    console.log(err);
-                }).then(() => {
-                    userEvents.editProfile();
-                    userEvents.updateProfile();
-                    userEvents.cancelEditProfile();
-                });
-        }
+        userModel.getCurrentUserInfo()
+            .then((res) => {
+                let data = userEvents.updateDataProfile(res);
+                return pageView.profilePage(selector, data);
+            }, (err) => {
+                console.log(err);
+            }).then(() => {
+                userEvents.editProfile();
+                userEvents.updateProfile();
+                userEvents.cancelEditProfile();
+            });
     }
 
     isUserLoggedIn() {
