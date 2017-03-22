@@ -422,6 +422,10 @@ body {
     font-family: 'Kreon', serif;
 }
 
+#nav-menu li .selectedMenu {
+    color: #437d8b;
+}
+
 
 /*Footer*/
 
@@ -764,7 +768,7 @@ body {
     #nav-menu li {
         font-family: 'Droid Sans', serif;
         text-align: center;
-        color: #393939;
+        /*color: #393939;*/
         font-size: 15px;
         border-top: 1px solid lightgrey;
     }

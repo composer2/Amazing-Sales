@@ -20,11 +20,11 @@ let homeEvents = (function() {
     function singInOutShowHide() {
         $("#sign-in-out").click(function() {
             var text = $(this).html();
-            if (text === "Sign in") {
-                text = "Sign out";
+            if (text === "SIGN IN") {
+                text = "SIGN OUT";
                 $('#nav-collapse2').addClass('in')
-            } else if (text === "Sign out") {
-                text = "Sign in";
+            } else if (text === "SIGN OUT") {
+                text = "SIGN IN";
                 $('#nav-collapse2').removeClass('in')
                 if ($('#main-content').hasClass('logged-in')) {
                     usersController.logout();

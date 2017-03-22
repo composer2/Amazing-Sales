@@ -45,11 +45,11 @@ import { shopController } from './js/controllers/shop-controller.js';
         .then((isLoggedIn) => {
             if (isLoggedIn) {
                 $('#main-content').addClass('logged-in');
-                $("#sign-in-out").html("Sign out");
+                $("#sign-in-out").html("SIGN OUT");
                 $('#profile-show-hide').removeClass('hidden');
             } else {
                 $('#main-content').removeClass('logged-in');
-                $("#sign-in-out").html("Sign in");
+                $("#sign-in-out").html("SIGN IN");
                 $('#profile-show-hide').addClass('hidden');
             }
         });
