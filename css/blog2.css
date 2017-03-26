@@ -1,12 +1,17 @@
-.breadcrumb {
+.blog-page .breadcrumb {
     background-color: white;
     border-radius: 0;
     width: 100%;
     padding-left: 30px;
 }
 
-.breadcrumb>li a {
+.blog-page .breadcrumb li a {
     color: #929292;
+    font-size: 14px;
+}
+
+.breadcrumb li:last-child a {
+    color: #1d1d1d;
 }
 
 .breadcrumb>li:hover a {
@@ -40,6 +45,10 @@
     padding-top: 20px;
 }
 
+#category-title h3 {
+    color: #929292;
+}
+
 .post-content {
     margin: 10px;
     min-height: 730px;
@@ -47,6 +56,10 @@
 
 .post-content .post h1 {
     font-size: 22px;
+}
+
+.post-content .post h5 {
+    color: #d0d0d0;
 }
 
 .post-content .posted-by {
@@ -353,6 +366,10 @@
     font-family: 'Kreon', serif;
 }
 
+#singlePostTitleHere {
+    color: #929292;
+}
+
 @media screen and (max-width: 2560px) {
     #comments .nested {
         margin-left: 15%;
@@ -384,6 +401,79 @@
     #comment-reply #description {
         width: 97.5%;
         left: 14px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #singlePagePost h2 {
+        font-size: 28px;
+    }
+    #singlePageThread h2 {
+        font-size: 28px;
+    }
+    .blog-posts li h3 {
+        font-size: 28px;
+    }
+    #category-title h1 {
+        font-size: 28px;
+    }
+    #category-title h3 {
+        font-size: 20px;
+    }
+    .post h1 {
+        font-size: 28px;
+    }
+    .post h5 {
+        font-size: 15px;
+    }
+    .post-content .posted-by {
+        font-size: 15px;
+    }
+    #singlePostTitleHere {
+        font-size: 15px;
+    }
+    #post-article h5 {
+        font-size: 12px;
+        color: #929292;
+    }
+    #post-article #read-more-comments {
+        font-size: 12px;
+        color: #1d1d1d;
+    }
+    #comments-from-thread {
+        font-size: 28px;
+        color: #1d1d1d;
+    }
+    .media-body .media-heading {
+        font-size: 20px;
+    }
+    .media-body .nested-p-mobile {
+        font-size: 12px;
+        color: #929292;
+    }
+    .media-body small {
+        font-size: 12px;
+        color: #d4d4d4;
+    }
+    .media-body .comment-question {
+        font-size: 12px;
+        color: #1d1d1d
+    }
+    #comment-reply .row h1 {
+        font-size: 28px;
+        color: #1d1d1d;
+    }
+    #submit-new-comment {
+        font-size: 12px;
+        color: #1d1d1d;
+    }
+    .post-content aside h3 {
+        font-size: 20px;
+        color: #1d1d1d;
+    }
+    .post-content aside ul li {
+        font-size: 12px;
+        color: #929292;
     }
 }
 

@@ -6,7 +6,7 @@
     </ol>
     <div class="row">
         <div id="category-title" class="kreonLight">
-            <h1 class="text-center">{{topicName}}</h1>
+            <h1 id="singlePostTitleFrom" class="text-center">{{topicName}}</h1>
             <h3 class="text-center">{{topicShortDescription}}</h3>
         </div>
     </div>
@@ -18,7 +18,7 @@
                 <h1 class="kreonLight">{{threadName}}</h1>
                 <hr>
                 <h5 class="kreonLight">Posted by <a href="" class="posted-by">{{postedBy}}</a>
-                    <date> {{threadDate}} in </date>
+                    <date> {{threadDate}} in </date><span id="singlePostTitleHere"></span>
                     <a href="" class="posted-by"></a> | {{comments.length}} Comments</h5>
                 <hr>
                 <img id="user-single-post-image" src="{{authorImage}}" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
@@ -29,10 +29,12 @@
                 </article>
                 <a id="read-more-comments" class="btn btn-default btn-blog pull-right">Comments</a>
             </div>
+            <br>
+            <br>
             <div id="article-comments" class="hidden">
                 <div id="comments">
                     <br>
-                    <h1 class="kreonLight">{{comments.length}} Comments</h1>
+                    <h1 id="comments-from-thread" class="kreonLight">{{comments.length}} Comments</h1>
                     {{#each comments}}
                     <div id="comment-{{@index}}" class="media append-reply-form">
                         <div class="media-left">

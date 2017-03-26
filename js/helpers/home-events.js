@@ -23,8 +23,10 @@ let homeEvents = (function() {
             if (text === "SIGN IN") {
                 text = "SIGN OUT";
                 $('#nav-collapse2').addClass('in')
+                $("#sign-in-out").addClass("selectedMenu")
             } else if (text === "SIGN OUT") {
                 text = "SIGN IN";
+                $("#sign-in-out").addClass("selectedMenu")
                 $('#nav-collapse2').removeClass('in')
                 if ($('#main-content').hasClass('logged-in')) {
                     usersController.logout();
@@ -51,10 +53,18 @@ let homeEvents = (function() {
         })
     }
 
+    function changeTheSelectedMainMenuColor() {
+        $("#nav-menu").on('click', 'li', function() {
+            let currentLi = $(this);
+            $("#nav-menu li").children().removeClass("selectedMenu");
+            currentLi.children(":first").addClass("selectedMenu")
+        })
+    }
     return {
         startCarousel,
         singInOutShowHide,
-        facebookShare
+        facebookShare,
+        changeTheSelectedMainMenuColor
     }
 
 })();

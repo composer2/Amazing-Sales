@@ -377,8 +377,8 @@ body {
     border: none;
     color: rgb(119, 119, 119);
     font-size: 15px;
-    bottom: -1px;
-    left: -6px;
+    /*bottom: -1px;
+    left: -6px;*/
     box-shadow: none;
 }
 
@@ -549,6 +549,56 @@ body {
     }
     #nav-collapse2 {
         width: 50%;
+    }
+    #nav-menu li {
+        font-size: 15px;
+    }
+    .header-text h2 {
+        font-size: 28px;
+    }
+    .header-text h4 {
+        font-size: 12px;
+        color: #bdbdbd;
+    }
+    .home-page h1 {
+        font-size: 28px;
+    }
+    .home-page h5 {
+        font-size: 20px;
+        color: #929292;
+    }
+    .home-page .recent-post h3 {
+        color: #1d1d1d;
+        font-size: 20px;
+    }
+    .home-page .recent-post p {
+        font-size: 12px;
+        color: #929292;
+    }
+    .blog-media-bar h3,
+    .from-the-blog ul h3 {
+        font-size: 20px;
+    }
+    .from-the-blog ul li {
+        font-size: 12px;
+    }
+    #footer .container .footer-logo h6 {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    #footer .container h3 {
+        font-size: 20px;
+    }
+    #footer .container ul li {
+        font-size: 12px;
+    }
+    #footer .footer-reserved {
+        font-size: 12px;
+        color: #929292;
+    }
+    #footer #footer-reserved-creator {
+        font-size: 12px;
+        color: #929292;
     }
 }
 

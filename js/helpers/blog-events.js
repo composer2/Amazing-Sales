@@ -214,6 +214,11 @@ let blogEvents = (function() {
         $("#comment-form-reset")[0].reset();
         return comment;
     }
+
+    function addTheTitle() {
+        let title = $("#singlePostTitleFrom").html();
+        $("#singlePostTitleHere").html(title);
+    }
     return {
         attachThreadsLinks,
         attachSinglePostsLinks,
@@ -224,7 +229,8 @@ let blogEvents = (function() {
         createNewReply,
         attachNumberOfPages,
         loadPostsByPageNumber,
-        loadThreadsByPageNumber
+        loadThreadsByPageNumber,
+        addTheTitle
     }
 })();
 export { blogEvents }

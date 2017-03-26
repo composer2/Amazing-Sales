@@ -107,6 +107,7 @@ class BlogController {
                 blogEvents.showComments();
                 blogEvents.createNewComment(data, pos);
                 blogEvents.createNewReply(data, pos, replyPos);
+                blogEvents.addTheTitle();
             });
     }
 }

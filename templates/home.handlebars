@@ -133,7 +133,7 @@
                 <div class="clearfix-div">
                     {{#each second3Topics}}
                     <li class="text-left droidSansRegular"><a href="#/blog/threads/{{_id}}"><span>{{topicName}}</span></a></li>
-                    {{/each}}                    
+                    {{/each}}
                 </div>
             </ul>
         </div>
@@ -141,13 +141,13 @@
             <h3 class="text-left kreonLight">Multi media bar</h3>
             <br>
             <div class="carousel slide media-carousel" id="media">
-                <div class="carousel-inner">
+                <div class="carousel-inner" id="media-bar-hover-text">
                     <div class="item  active">
                         {{#each first6}}
                         <div class="col-sm-2 media-bar-img-div">
+                            <span class="hidden media-bar-hidden-text georgiaItalic">{{topicShortDescription}}</span>
                             <a class="thumbnail" href="#/home">
                                 <img alt="" src="{{topicImage}}">
-                                <p class="hidden media-bar-hidden-text georgiaItalic">{{topicShortDescription}}</p>
                             </a>
                         </div>
                         {{/each}}
@@ -155,9 +155,9 @@
                     <div class="item">
                         {{#each second6}}
                         <div class="col-sm-2 media-bar-img-div">
+                            <span class="hidden media-bar-hidden-text georgiaItalic">{{topicShortDescription}}</span>
                             <a class="thumbnail" href="#/home">
                                 <img alt="" src="{{topicImage}}">
-                                <p class="hidden media-bar-hidden-text georgiaItalic">{{topicShortDescription}}</p>                                
                             </a>
                         </div>
                         {{/each}}

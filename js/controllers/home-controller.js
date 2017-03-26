@@ -22,6 +22,7 @@ class HomeController {
                 homeEvents.startCarousel();
                 homeEvents.singInOutShowHide();
                 homeEvents.facebookShare();
+                homeEvents.changeTheSelectedMainMenuColor();
             });
     }
     aboutUs(context, selector) {
