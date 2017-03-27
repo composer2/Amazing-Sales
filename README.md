@@ -17,4 +17,4 @@
 
 ## GitHub:<a href="https://github.com/composer2/Amazing-Sales">Amazing Sales</a>
 
-## Presentation: <a href="not done">Amazing Sales Presentation</a>
+## Presentation: <a href="http://best.telerikacademy.com/projects/534/Amazing-Sales">Amazing Sales Presentation</a>
