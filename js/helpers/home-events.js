@@ -1,5 +1,6 @@
 import { usersController } from '../controllers/users-controller.js'
 import { notificator } from '../helpers/notificator.js'
+import { blogController } from '../controllers/blog-controller.js';
 
 let homeEvents = (function() {
     function startCarousel() {
@@ -60,11 +61,21 @@ let homeEvents = (function() {
             currentLi.children(":first").addClass("selectedMenu")
         })
     }
+
+    function searchByTopicName() {
+        $("#search-box-input").on('input', function() {
+            let searchPhrase = $(this).val();
+            if (searchPhrase.length >= 3) {
+                blogController.searchThreadsByPhrase(searchPhrase);
+            }
+        });
+    }
     return {
         startCarousel,
         singInOutShowHide,
         facebookShare,
-        changeTheSelectedMainMenuColor
+        changeTheSelectedMainMenuColor,
+        searchByTopicName
     }
 
 })();

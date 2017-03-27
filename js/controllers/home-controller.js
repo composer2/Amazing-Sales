@@ -20,9 +20,9 @@ class HomeController {
                 console.log(err);
             }).then(() => {
                 homeEvents.startCarousel();
-                homeEvents.singInOutShowHide();
                 homeEvents.facebookShare();
                 homeEvents.changeTheSelectedMainMenuColor();
+                homeEvents.searchByTopicName();
             });
     }
     aboutUs(context, selector) {

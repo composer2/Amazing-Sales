@@ -2,6 +2,7 @@ import { pageView } from '../view/page-viewer.js';
 import { userModel } from '../models/user-model.js';
 import { notificator } from '../helpers/notificator.js';
 import { userEvents } from '../helpers/user-events.js';
+import { homeEvents } from '../helpers/home-events.js';
 
 class UserController {
     signInUp() {
@@ -60,6 +61,7 @@ class UserController {
     }
 
     isUserLoggedIn() {
+        homeEvents.singInOutShowHide();
         return userModel.isLoggedIn();
     }
 
@@ -67,8 +69,12 @@ class UserController {
         return userModel.getAllUsernames();
     }
     redirectToHomeAndClearStorage() {
-        if ('http://127.0.0.1:8080/#/profile' === window.location.href) {
-            window.location.href = 'http://127.0.0.1:8080/#/home'
+        let url = window.location.href;
+        let urlContain = url.split('/');
+        if (urlContain[urlContain.length - 1] === 'profile') {
+            urlContain[urlContain.length - 1] = 'home'
+            let newUrl = urlContain.join('/');
+            window.location.href = newUrl;
         }
         localStorage.clear();
     }

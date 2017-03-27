@@ -75,6 +75,27 @@ class BlogController {
                 blogEvents.loadThreadsByPageNumber();
             });
     }
+    searchThreadsByPhrase(phrase) {
+        let selector = "#main-content";
+        blogModel.getAllForumInfo()
+            .then((res) => {
+                console.log(res);
+                let sortedData = [];
+                for (let i = 0; i < res.length; i++) {
+                    if (res[i]['topicName'].toLowerCase().includes(phrase.toLowerCase())) {
+                        sortedData.push(res[i]);
+                    }
+                }
+                let data = {
+                    topics: sortedData
+                };
+                console.log(data);
+                return pageView.blog(selector, data);
+
+            }, (err) => {
+                console.log(err);
+            })
+    }
 
     singlePost(context, selector) {
         let data;

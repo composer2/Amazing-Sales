@@ -387,6 +387,8 @@ body {
 }
 
 #nav-collapse2 .form-inline {
+    float: right;
+    margin-right: 5px;
     background: white;
 }
 

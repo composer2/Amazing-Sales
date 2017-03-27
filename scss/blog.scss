@@ -1,0 +1,695 @@
+.blog-page .breadcrumb {
+    background-color: white;
+    border-radius: 0;
+    width: 100%;
+    padding-left: 30px;
+    li a {
+        color: #929292;
+        font-size: 14px;
+    }
+}
+
+.breadcrumb {
+    li:last-child a {
+        color: #1d1d1d;
+    }
+    >li {
+        &:hover a {
+            color: orangered;
+        }
+        +li:before {
+            color: #929292;
+            content: ">> ";
+            padding: 0 5px;
+        }
+    }
+}
+
+.blog-page {
+    left: 5%;
+    width: 90.2%;
+    background: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: -20px;
+}
+
+#category-title {
+    background-image: url('../images/title-content.png');
+    background-repeat: repeat-x;
+    height: 131px;
+    margin-top: -20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    h1 {
+        padding-top: 20px;
+    }
+    h3 {
+        color: #929292;
+    }
+}
+
+.post-content {
+    margin: 10px;
+    min-height: 730px;
+    .post {
+        h1 {
+            font-size: 22px;
+        }
+        h5 {
+            color: #d0d0d0;
+        }
+    }
+    .posted-by {
+        color: #929292;
+        text-decoration: none;
+    }
+    h5 {
+        color: #d3d3d3;
+    }
+    .posted-by:hover {
+        color: orangered;
+    }
+    aside {
+        margin-top: 5px;
+        padding-left: 40px;
+        ul {
+            padding-left: 10px;
+            color: #929292;
+            h3 {
+                color: #1d1d1d;
+            }
+            li {
+                margin-left: 17px;
+                font-size: 15px;
+                line-height: 25px;
+                a {
+                    color: #929292;
+                    text-decoration: none;
+                }
+                &:hover a {
+                    color: orangered;
+                }
+            }
+        }
+    }
+    section img {
+        border-radius: 0;
+        margin-right: 30px;
+    }
+    #user-single-post-image {
+        max-width: 290px;
+        max-height: 290px;
+    }
+    section {
+        ul {
+            list-style-type: none;
+            .blog-post-author {
+                position: relative;
+                top: 15px;
+                left: -15px;
+            }
+            .blog-post-summary {
+                font-size: 15px;
+                color: #929292;
+                padding-top: 5px;
+                margin-bottom: 5px;
+                height: 60px;
+                overflow: hidden;
+            }
+            .blog-post-tags {
+                font-size: 20px;
+            }
+        }
+        a {
+            color: #2c2c2c;
+            margin-top: 20px;
+            text-decoration: none;
+            &:hover {
+                color: orangered;
+            }
+        }
+    }
+    article h5 {
+        color: #929292;
+        line-height: 25px;
+    }
+    div .page-pagination {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-left: -50px;
+        .selected {
+            background-color: #f6f6f6;
+        }
+        li {
+            display: inline-block;
+            padding: 7px 14px;
+            border: 1px solid #eaeaea;
+            border-radius: 7px;
+            margin: 2.5px;
+            a {
+                text-decoration: none;
+                color: #1d1d1d;
+            }
+            &:hover {
+                background-color: lightgrey;
+                a {
+                    color: orangered;
+                }
+            }
+        }
+    }
+}
+
+
+/*comments*/
+
+#comments {
+    .media {
+        background-image: url("../images/comment.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 105.5%;
+        margin-left: -15px;
+        position: relative;
+    }
+    .nested {
+        background-image: url("../images/comment.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 89%;
+        margin-left: 14%;
+        margin-top: -15px;
+        position: relative;
+    }
+    .media {
+        img {
+            margin-top: 30px;
+            margin-left: 30px;
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            padding: 4px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        h3 {
+            display: inline-block;
+            margin-left: -15px;
+            margin-top: 30px;
+            position: absolute;
+            color: #1d1d1d;
+        }
+        p {
+            display: inline-block;
+            position: absolute;
+            margin-right: 40px;
+            margin-left: -15px;
+            margin-top: 70px;
+            color: #929292;
+        }
+    }
+    .nested .nested-p {
+        position: absolute;
+        margin-right: 40px;
+        color: #929292;
+    }
+    .media .text-right {
+        position: relative;
+        float: right;
+        margin-top: 25px;
+        margin-right: 30px;
+        color: #d4d4d4;
+    }
+    .comment-question {
+        position: absolute;
+        bottom: 50px;
+        right: 43px;
+        padding: 7px 7px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #1d1d1d;
+        border: 1px solid #ADADAD;
+    }
+    .comment-answer {
+        position: absolute;
+        bottom: 50px;
+        right: 39px;
+        padding: 7px 7px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #1d1d1d;
+        border: 1px solid #ADADAD;
+    }
+    .comment-question:hover,
+    .comment-answer:hover {
+        background-color: #E6E6E6;
+        color: orangered;
+    }
+}
+
+#comment-reply {
+    position: relative;
+    height: 410px;
+    .row h1 {
+        width: 92%;
+        margin-left: 2%;
+        color: #1d1d1d;
+    }
+    #name {
+        position: absolute;
+        left: 2%;
+        top: 0;
+        width: 45%;
+        height: 40px;
+        border: 1px solid #f0f0f0;
+        padding-left: 23px;
+        background-image: url("../images/input-bg.png");
+        background-repeat: repeat-x;
+    }
+    #email {
+        position: absolute;
+        left: 2%;
+        top: 60px;
+        width: 45%;
+        height: 40px;
+        border: 1px solid #f0f0f0;
+        padding-left: 23px;
+        background-image: url("../images/input-bg.png");
+        background-repeat: repeat-x;
+    }
+    #description {
+        position: absolute;
+        top: 120px;
+        left: 14px;
+        border: 1px solid #f0f0f0;
+        padding-top: 13px;
+        padding-left: 23px;
+        width: 96.5%;
+        height: 170px;
+        background-image: url("../images/textare-bg.png");
+        background-repeat: repeat-x;
+    }
+    button {
+        position: absolute;
+        width: 89px;
+        height: 38px;
+        top: 300px;
+        left: 86%;
+        color: #2c2c2c;
+    }
+}
+
+#submit-new-comment,
+#submit-new-post {
+    margin-top: 300px;
+    margin-right: -10px;
+}
+
+.droidSansRegular {
+    font-family: 'Droid Sans', serif;
+}
+
+.georgiaItalic {
+    font-family: 'Georgia', serif;
+}
+
+.kreonLight {
+    font-family: 'Kreon', serif;
+    font-weight: 300;
+}
+
+.kreonRegular {
+    font-family: 'Kreon', serif;
+}
+
+#singlePostTitleHere {
+    color: #929292;
+}
+
+@media screen and (max-width: 2560px) {
+    #comments .nested {
+        margin-left: 15%;
+    }
+    #comment-reply button {
+        width: 200px;
+        left: 85.7%;
+    }
+    .post-content #read-less {
+        width: 200px;
+    }
+    #comment-reply #description {
+        width: 97.5%;
+        left: 29px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #comments .nested {
+        margin-left: 14.5%;
+    }
+    #comment-reply button {
+        width: 150px;
+        margin-left: -45px;
+    }
+    .post-content #read-less {
+        width: 150px;
+    }
+    #comment-reply #description {
+        width: 97.5%;
+        left: 14px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #singlePagePost h2,
+    #singlePageThread h2,
+    .blog-posts li h3 {
+        font-size: 28px;
+    }
+    #category-title {
+        h1 {
+            font-size: 28px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+    }
+    .post {
+        h1 {
+            font-size: 28px;
+        }
+        h5 {
+            font-size: 15px;
+        }
+    }
+    .post-content .posted-by,
+    #singlePostTitleHere {
+        font-size: 15px;
+    }
+    #post-article {
+        h5 {
+            font-size: 12px;
+            color: #929292;
+        }
+        #read-more-comments {
+            font-size: 12px;
+            color: #1d1d1d;
+        }
+    }
+    #comments-from-thread {
+        font-size: 28px;
+        color: #1d1d1d;
+    }
+    .media-body {
+        .media-heading {
+            font-size: 20px;
+        }
+        .nested-p-mobile {
+            font-size: 12px;
+            color: #929292;
+        }
+        small {
+            font-size: 12px;
+            color: #d4d4d4;
+        }
+        .comment-question {
+            font-size: 12px;
+            color: #1d1d1d;
+        }
+    }
+    #comment-reply .row h1 {
+        font-size: 28px;
+        color: #1d1d1d;
+    }
+    #submit-new-comment {
+        font-size: 12px;
+        color: #1d1d1d;
+    }
+    .post-content aside {
+        h3 {
+            font-size: 20px;
+            color: #1d1d1d;
+        }
+        ul li {
+            font-size: 12px;
+            color: #929292;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .blog-page {
+        width: 91.45%;
+    }
+    #comments .nested {
+        margin-left: 14%;
+    }
+    #comment-reply button {
+        width: 90px;
+        margin-left: -20px;
+    }
+    .post-content #read-less {
+        width: 90px;
+    }
+    #comment-reply #description {
+        width: 97.5%;
+        left: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-page {
+        width: 93.5%;
+    }
+    #comments .nested {
+        margin-left: 13.5%;
+    }
+    #comment-reply {
+        button {
+            margin-left: -43px;
+        }
+        #description {
+            width: 97.5%;
+            left: 10px;
+        }
+    }
+    #comments .nested #nested-author {
+        margin-top: 12px;
+    }
+    #submit-new-comment,
+    #submit-new-post {
+        margin-right: -7px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .blog-page {
+        width: 92.5%;
+    }
+    #category-title {
+        margin-top: 20px;
+        h1 {
+            font-size: 2.0em;
+        }
+        h3 {
+            font-size: 1.7em;
+        }
+    }
+    .post-content {
+        .post h1 {
+            font-size: 1.6em;
+        }
+        aside {
+            margin: 0;
+            padding: 0;
+            margin-left: -10px;
+            h3 {
+                font-size: 1.5em;
+            }
+        }
+    }
+    .blog-page .breadcrumb {
+        display: none;
+    }
+    .post-content section {
+        .blog-posts {
+            margin: 0;
+            padding: 0;
+        }
+        ul .blog-post-author {
+            display: block;
+            float: right;
+            width: 190px;
+            height: 50px;
+            top: 0px;
+            margin-right: 30px;
+        }
+    }
+    #comments {
+        .media {
+            margin-left: -15%;
+            min-height: 300px;
+            height: auto;
+            width: 130%;
+            h3 {
+                margin-top: 80px;
+            }
+        }
+        .nested {
+            margin-left: -10%;
+            width: 125%;
+        }
+    }
+    #comment-reply button {
+        margin-left: -240px;
+    }
+    #read-less {
+        margin-top: -40px;
+        height: 38px;
+    }
+    #comment-reply #description {
+        width: 97.5%;
+        left: 10px;
+    }
+    #comments {
+        .media #nested-author1 {
+            font-size: 1.2em;
+            margin-top: 32px;
+        }
+        .nested #nested-author2 {
+            margin-top: 32px;
+            font-size: 1.2em;
+            margin-left: 0;
+            width: 180px;
+        }
+        .nested-p-mobile {
+            top: 60px;
+            left: 45px;
+            width: 88%;
+            height: auto;
+        }
+    }
+    #comment-reply {
+        left: -20px;
+        #name,
+        #email {
+            width: 98%;
+        }
+        #description {
+            left: 8px;
+            width: 98%;
+        }
+        button {
+            width: 63%;
+            left: 72%;
+        }
+    }
+    #category-title {
+        margin-top: -20px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #submit-new-comment,
+    #submit-new-post {
+        margin-right: -17px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .blog-page {
+        width: 91.5%;
+    }
+    #category-title {
+        h1 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.4em;
+        }
+    }
+    .post-content {
+        .post h1 {
+            font-size: 1.4em;
+        }
+        section ul .blog-post-author {
+            margin: 0;
+            width: 160px;
+            height: 40px;
+            font-size: 13px;
+        }
+    }
+    #comment-reply {
+        #name,
+        #email {
+            width: 108%;
+        }
+        #description {
+            left: 8px;
+            width: 108%;
+        }
+        button {
+            width: 53%;
+            left: 85%;
+        }
+    }
+    #read-less {
+        margin-top: -40px;
+        height: 38px;
+        margin-right: -25px;
+    }
+    #submit-new-comment,
+    #submit-new-post {
+        margin-right: -47px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .blog-page {
+        width: 90%;
+    }
+    .post-content section ul {
+        .blog-post-details {
+            margin: 0;
+            padding: 0;
+        }
+        .blog-post-author {
+            margin: 0;
+            padding: 0;
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            top: -50px;
+            left: 16px;
+        }
+        .blog-post-summary {
+            width: 220px;
+            height: 80px;
+            position: relative;
+            top: -30px;
+        }
+        .blog-post-tags {
+            margin-top: -20px;
+        }
+    }
+    #comment-reply button {
+        width: 53%;
+        left: 104%;
+    }
+    #read-less {
+        margin-right: -20px;
+    }
+    #submit-new-comment,
+    #submit-new-post {
+        margin-right: -42px;
+    }
+}
+
+
+/*media queries*/

@@ -1,0 +1,66 @@
+.about-us {
+    background: white;
+    width: 90.1%;
+    padding: 0;
+    padding-top: 20px;
+    margin-top: -20px;
+    .about-us-img {
+        padding-bottom: 20px;
+    }
+    .about-us-h2 {
+        padding: 15px;
+        line-height: 38px;
+        text-indent: 50px;
+        text-align: justify;
+    }
+}
+
+.georgiaItalic {
+    font-family: 'Georgia', serif;
+}
+
+.kreonLight {
+    font-family: 'Kreon', serif;
+    font-weight: 300;
+}
+
+
+/*media queries*/
+
+@media screen and (max-width: 1024px) {
+    .about-us {
+        width: 91.4%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-us {
+        width: 93.6%;
+        .about-us-h2 {
+            font-size: 1.2em;
+            line-height: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-us {
+        .about-us-h2 {
+            font-size: 1em;
+            line-height: 17px;
+        }
+        width: 92.6%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .about-us {
+        width: 91.6%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .about-us {
+        width: 90.3%;
+    }
+}
